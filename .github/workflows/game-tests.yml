@@ -1,4 +1,4 @@
-name: Herní boti – denní kontrola
+name: Herní boti – rychlá kontrola
 
 on:
   workflow_dispatch:          # ruční spuštění tlačítkem "Run workflow"
@@ -14,7 +14,7 @@ on:
         default: 'en,cs'
 
 permissions:
-  contents: write             # zápis reportu do větve gh-pages
+  contents: read
 
 concurrency:
   group: game-tests-smoke
@@ -57,30 +57,6 @@ jobs:
           name: report-${{ github.run_number }}
           path: reports
           retention-days: 14
-
-      - name: Odlehčit report pro web
-        if: always()
-        run: |
-          rm -rf reports/artifacts
-          find reports -name '*.zip' -delete
-          find reports -name '*.webm' -size +20M -delete
-
-      - name: Zveřejnit report (…/denni/)
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: reports
-          destination_dir: denni
-          keep_files: true
-
-      - name: Rozcestník
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site
-          keep_files: true
 
       - name: Výsledek
         if: steps.bots.outcome == 'failure'

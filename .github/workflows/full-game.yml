@@ -1,5 +1,8 @@
 name: Herní boti – celá hra
 
+# Každou noc projde bot všech 167 levelů na každém zařízení a v každém jazyce.
+# Každá kombinace běží souběžně ve vlastní úloze (2,5–4 hodiny), ráno je hotový report.
+
 on:
   workflow_dispatch:
     inputs:
@@ -16,10 +19,12 @@ on:
         description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
         default: ''
   schedule:
-    - cron: '7 21 * * *'
+    - cron: '7 21 * * *'      # každý den ve 23:07 českého času (letní čas), hotovo do rána
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: game-tests-full
@@ -43,7 +48,7 @@ jobs:
   play:
     needs: plan
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 350        # GitHub povolí max. 6 hodin na úlohu
     strategy:
       fail-fast: false
       matrix:
@@ -52,10 +57,10 @@ jobs:
     env:
       BASE_URL: ${{ inputs.base_url }}
       LEVELS: all
-      EXPECTED_LEVELS: '167'
+      EXPECTED_LEVELS: '167'    # počet levelů ve hře; po jejich dohrání je konec hry, ne zaseknutí
       LANGS: ${{ matrix.lang }}
       RETRIES: ${{ inputs.retries || '3' }}
-      SHOTS: key
+      SHOTS: key                # screenshot desky u každého levelu + chyby, bez obrazovek výher
       FULL_BROWSERS: '1'
       WORKERS: '1'
       BOT_SEED: ${{ secrets.BOT_SEED }}
@@ -85,6 +90,9 @@ jobs:
     needs: play
     if: always()
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -96,16 +104,21 @@ jobs:
         run: |
           node scripts/summary.mjs > /dev/null
           cat reports/summary.md >> "$GITHUB_STEP_SUMMARY"
-      - name: Zveřejnit report (…/cela-hra/)
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Webový report (jen výběr screenshotů, zmenšených)
+        run: |
+          SHOTS_SAMPLE=1 SHOTS_DIR=thumbs OUT=reports/web.html node scripts/summary.mjs > /dev/null
+          command -v convert >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick)
+          mkdir -p web/cela-hra/thumbs
+          cp site/index.html web/index.html
+          cp reports/web.html web/cela-hra/index.html
+          grep -o 'thumbs/[^"]*\.jpg' reports/web.html | sort -u | while read -r t; do
+            n="${t#thumbs/}"; src="reports/shots/$(echo "${n%.jpg}" | sed 's#__#/#').png"
+            if [ -f "$src" ]; then convert "$src" -resize "900x900>" -quality 72 "web/cela-hra/$t"; fi
+          done
+          du -sh web
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: reports
-          destination_dir: cela-hra
-          keep_files: true
-      - name: Rozcestník
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site
-          keep_files: true
+          path: web
+      - id: deployment
+        uses: actions/deploy-pages@v4
