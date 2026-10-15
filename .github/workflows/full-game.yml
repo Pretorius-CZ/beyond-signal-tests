@@ -57,7 +57,7 @@ jobs:
     env:
       BASE_URL: ${{ inputs.base_url }}
       LEVELS: all
-      EXPECTED_LEVELS: '167'    # počet levelů ve hře; po jejich dohrání je konec hry, ne zaseknutí
+      EXPECTED_LEVELS: '187'    # počet levelů ve hře; po jejich dohrání je konec hry, ne zaseknutí
       LANGS: ${{ matrix.lang }}
       RETRIES: ${{ inputs.retries || '3' }}
       SHOTS: key                # screenshot desky u každého levelu + chyby, bez obrazovek výher
