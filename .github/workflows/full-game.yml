@@ -1,17 +1,14 @@
 name: Herní boti – celá hra
 
-# Bot projde všechny levely od začátku do konce. Trvá 2–4 hodiny na zařízení,
-# proto běží jednou týdně a jen na vybraných zařízeních (každé ve vlastní úloze souběžně).
-
 on:
   workflow_dispatch:
     inputs:
       devices:
-        description: 'Zařízení (názvy z playwright.config.js, oddělené čárkou)'
-        default: 'iPhone SE (malý telefon),Pixel 7 (Android),Notebook 1366×768'
+        description: 'Zařízení (oddělená čárkou)'
+        default: 'iPhone SE (malý telefon),iPhone 15 Pro Max,Pixel 7 (Android),Galaxy S9+ (Android),Telefon na šířku,iPad Mini,Notebook 1366×768,Desktop 1920×1080,Desktop Firefox'
       langs:
         description: 'Jazyky (en,cs)'
-        default: 'en'
+        default: 'en,cs'
       retries:
         description: 'Kolikrát smí bot prohraný level zkusit znovu'
         default: '3'
@@ -19,7 +16,7 @@ on:
         description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
         default: ''
   schedule:
-    - cron: '7 1 * * 0'       # neděle cca 3:07 českého času
+    - cron: '7 21 * * *'
 
 permissions:
   contents: write
@@ -33,29 +30,34 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       devices: ${{ steps.m.outputs.devices }}
+      langs: ${{ steps.m.outputs.langs }}
     steps:
       - id: m
         env:
-          DEVICES: ${{ inputs.devices || 'iPhone SE (malý telefon),Pixel 7 (Android),Notebook 1366×768' }}
-        run: echo "devices=$(node -e 'console.log(JSON.stringify(process.env.DEVICES.split(",").map(s=>s.trim()).filter(Boolean)))')" >> "$GITHUB_OUTPUT"
+          DEVICES: ${{ inputs.devices || 'iPhone SE (malý telefon),iPhone 15 Pro Max,Pixel 7 (Android),Galaxy S9+ (Android),Telefon na šířku,iPad Mini,Notebook 1366×768,Desktop 1920×1080,Desktop Firefox' }}
+          LANGS: ${{ inputs.langs || 'en,cs' }}
+        run: |
+          echo "devices=$(node -e 'console.log(JSON.stringify(process.env.DEVICES.split(",").map(s=>s.trim()).filter(Boolean)))')" >> "$GITHUB_OUTPUT"
+          echo "langs=$(node -e 'console.log(JSON.stringify(process.env.LANGS.split(",").map(s=>s.trim()).filter(Boolean)))')" >> "$GITHUB_OUTPUT"
 
   play:
     needs: plan
     runs-on: ubuntu-latest
-    timeout-minutes: 350        # GitHub povolí max. 6 hodin na úlohu
+    timeout-minutes: 350
     strategy:
       fail-fast: false
       matrix:
         device: ${{ fromJSON(needs.plan.outputs.devices) }}
+        lang: ${{ fromJSON(needs.plan.outputs.langs) }}
     env:
       BASE_URL: ${{ inputs.base_url }}
       LEVELS: all
-      EXPECTED_LEVELS: '167'    # počet levelů ve hře; po jejich dohrání je konec hry, ne zaseknutí
-      LANGS: ${{ inputs.langs || 'en' }}
+      EXPECTED_LEVELS: '167'
+      LANGS: ${{ matrix.lang }}
       RETRIES: ${{ inputs.retries || '3' }}
-      SHOTS: key                # screenshot desky u každého levelu + chyby, bez obrazovek výher
+      SHOTS: key
       FULL_BROWSERS: '1'
-      WORKERS: '2'
+      WORKERS: '1'
       BOT_SEED: ${{ secrets.BOT_SEED }}
     steps:
       - uses: actions/checkout@v4
@@ -69,7 +71,7 @@ jobs:
         run: npx playwright test --project "${{ matrix.device }}"
         continue-on-error: true
       - id: name
-        run: echo "slug=$(echo '${{ matrix.device }}' | iconv -t ascii//TRANSLIT | tr -cs 'A-Za-z0-9' '-')" >> "$GITHUB_OUTPUT"
+        run: echo "slug=$(echo '${{ matrix.device }}-${{ matrix.lang }}' | iconv -t ascii//TRANSLIT | tr -cs 'A-Za-z0-9' '-')" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -100,4 +102,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: reports
           destination_dir: cela-hra
+          keep_files: true
+      - name: Rozcestník
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
           keep_files: true
