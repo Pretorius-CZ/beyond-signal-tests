@@ -12,8 +12,6 @@ on:
       langs:
         description: 'Jazyky (en,cs)'
         default: 'en,cs'
-  schedule:
-    - cron: '17 4 * * *'      # každý den cca v 6:17 českého času
 
 permissions:
   contents: write             # zápis reportu do větve gh-pages
