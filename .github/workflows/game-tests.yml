@@ -60,6 +60,13 @@ jobs:
           path: reports
           retention-days: 14
 
+      - name: Odlehčit report pro web
+        if: always()
+        run: |
+          rm -rf reports/artifacts
+          find reports -name '*.zip' -delete
+          find reports -name '*.webm' -size +20M -delete
+
       - name: Zveřejnit report (…/denni/)
         if: always()
         uses: peaceiris/actions-gh-pages@v4
