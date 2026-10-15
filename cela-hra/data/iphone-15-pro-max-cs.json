@@ -1,0 +1,55 @@
+{
+  "project": "iPhone 15 Pro Max",
+  "language": "cs",
+  "mode": "full",
+  "botId": "b8941369-52fb-419a-b921-ab14eba21d2c",
+  "analytics": true,
+  "viewport": {
+    "width": 430,
+    "height": 739
+  },
+  "startedAt": "2026-10-15T08:43:03.269Z",
+  "levels": [
+    {
+      "title": "O trochu víc světla",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 53336,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": []
+    },
+    {
+      "title": "Bezpečná přepážka",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 36818,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Vnitřní průlez"
+      ]
+    }
+  ],
+  "loadMs": 725,
+  "bytes": 4830292
+}

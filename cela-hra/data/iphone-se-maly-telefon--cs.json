@@ -1,0 +1,177 @@
+{
+  "project": "iPhone SE (malý telefon)",
+  "language": "cs",
+  "mode": "full",
+  "botId": "5bb4069c-d70d-4e93-b937-d3a4a5357d01",
+  "analytics": true,
+  "viewport": {
+    "width": 320,
+    "height": 568
+  },
+  "startedAt": "2026-10-15T08:42:55.745Z",
+  "levels": [
+    {
+      "title": "O trochu víc světla",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 2,
+      "stalls": 0,
+      "durationMs": 29882,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": []
+    },
+    {
+      "title": "Bezpečná přepážka",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18798,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Vnitřní průlez"
+      ]
+    },
+    {
+      "title": "Tlak drží",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP",
+        "Beam"
+      ],
+      "boostersFired": 0,
+      "tutorials": 3,
+      "stalls": 0,
+      "durationMs": 25828,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Těsnění komory"
+      ]
+    },
+    {
+      "title": "Jiskra naděje",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 31475,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Nouzová světla"
+      ]
+    },
+    {
+      "title": "Jasnější výhled",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 29355,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Těsnění oken"
+      ]
+    },
+    {
+      "title": "Znovu v provozu",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 63394,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Letový počítač"
+      ]
+    },
+    {
+      "title": "Co nás čeká",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 67797,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Diagnostika lodi"
+      ]
+    },
+    {
+      "title": "Směr v šumu",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 27906,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Otevřít navigační konzoli",
+        "Signální anténa"
+      ]
+    }
+  ],
+  "loadMs": 648,
+  "bytes": 4830202
+}

@@ -1,0 +1,3841 @@
+{
+  "project": "Desktop 1920×1080",
+  "language": "en",
+  "mode": "full",
+  "botId": "3e421d11-88fc-482f-9581-f7ef3261108b",
+  "analytics": true,
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "startedAt": "2026-10-15T08:42:42.422Z",
+  "levels": [
+    {
+      "title": "A little more light",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 12466,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": []
+    },
+    {
+      "title": "A safe barrier",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 8350,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Inner hatch"
+      ]
+    },
+    {
+      "title": "Holding steady",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "Beam"
+      ],
+      "boostersFired": 0,
+      "tutorials": 2,
+      "stalls": 0,
+      "durationMs": 11741,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Airlock seals"
+      ]
+    },
+    {
+      "title": "A spark of hope",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 11591,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Emergency lights"
+      ]
+    },
+    {
+      "title": "A clearer view",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14534,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Window seals"
+      ]
+    },
+    {
+      "title": "Back online",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "Laser"
+      ],
+      "boostersFired": 1,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 31136,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Flight computer"
+      ]
+    },
+    {
+      "title": "What lies ahead",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32976,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Ship diagnostics"
+      ]
+    },
+    {
+      "title": "A direction in the noise",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12199,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Open navigation console",
+        "Signal antenna"
+      ]
+    },
+    {
+      "title": "Someone is listening",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 9950,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Communications"
+      ]
+    },
+    {
+      "title": "A point among the stars",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32240,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Star chart"
+      ]
+    },
+    {
+      "title": "A course to follow",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14379,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Flight route"
+      ]
+    },
+    {
+      "title": "A breath of hope",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 11257,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Enter crew quarters",
+        "Air circulation"
+      ]
+    },
+    {
+      "title": "Clear the air",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12510,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Air filters"
+      ]
+    },
+    {
+      "title": "Somewhere to rest",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17079,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Bunk"
+      ]
+    },
+    {
+      "title": "A place to call home",
+      "budget": 18,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25072,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Cabin systems"
+      ]
+    },
+    {
+      "title": "Every drop matters",
+      "budget": 12,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 9576,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Enter galley",
+        "Water system"
+      ]
+    },
+    {
+      "title": "Keep it fresh",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 11505,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Cold storage"
+      ]
+    },
+    {
+      "title": "A place for everything",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 16548,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Supply racks"
+      ]
+    },
+    {
+      "title": "Something warm",
+      "budget": 13,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12582,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Food station"
+      ]
+    },
+    {
+      "title": "Keep your cool",
+      "budget": 19,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13433,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Enter engine room",
+        "Cooling circuit"
+      ]
+    },
+    {
+      "title": "A reserve of hope",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 16324,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Fuel system"
+      ]
+    },
+    {
+      "title": "A beating heart",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28365,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Main power"
+      ]
+    },
+    {
+      "title": "Built to move",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22791,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Engine assembly"
+      ]
+    },
+    {
+      "title": "Steady and ready",
+      "budget": 13,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13796,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Systems test"
+      ]
+    },
+    {
+      "title": "A skin for the ship",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19653,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Hull panels"
+      ]
+    },
+    {
+      "title": "Ready on the outside",
+      "budget": 11,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 11858,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Engine nacelles"
+      ]
+    },
+    {
+      "title": "Back on our feet",
+      "budget": 18,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13721,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Landing gear"
+      ]
+    },
+    {
+      "title": "Enough to reach the stars",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20794,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Emergency fuel depot"
+      ]
+    },
+    {
+      "title": "One last push",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19206,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Start final launch challenge"
+      ]
+    },
+    {
+      "title": "A safe approach",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 10126,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "Launch",
+        "příběh",
+        "příběh",
+        "Silent Mine 0/6",
+        "Landing beacons"
+      ]
+    },
+    {
+      "title": "A door into silence",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 16315,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Wake the station",
+      "budget": 17,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19405,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Something worth carrying",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17579,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "A message beneath the loop",
+      "budget": 17,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 16029,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Bring it home",
+      "budget": 19,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21746,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "A light in the snow",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13876,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Long-range scanner Activate scanner",
+        "Icebound relay 0/6",
+        "Approach beacons"
+      ]
+    },
+    {
+      "title": "Beyond the frost",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14886,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Warmth returns",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 16819,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "The missing half",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13248,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Listen without a name",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 31384,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Carry the warmth",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 36291,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Hold on to the wreck",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 11845,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Drifting archive 0/6",
+        "Docking clamps"
+      ]
+    },
+    {
+      "title": "Into the archive",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13743,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "A borrowed heartbeat",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23896,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Recover the second half",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17389,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "A signal without a reply",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23617,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Bring the record home",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 36265,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "A place to return to",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18248,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Outer dock"
+      ]
+    },
+    {
+      "title": "Keep the refuge alive",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14832,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Close the circle",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24814,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "A steady current",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22460,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Where the expedition went",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28558,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "One last alignment · HARD",
+      "budget": 34,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 36369,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Buoy power",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 12,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17231,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "příběh",
+        "příběh",
+        "Survey buoy 0/3",
+        "Buoy power"
+      ]
+    },
+    {
+      "title": "Survey antenna",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14455,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Buoy flight record",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 30283,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Survey walkway",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18212,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Shattered moon 0/6",
+        "Survey walkway"
+      ]
+    },
+    {
+      "title": "Excavation generator",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19873,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Sample drill controls",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 30952,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Mineral spectrometer",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33751,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Protected ore sorter",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26916,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Archive probe",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 31745,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Research landing pad",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17102,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Verdant world 0/6",
+        "Research landing pad"
+      ]
+    },
+    {
+      "title": "Water circulation",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 12,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17554,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Greenhouse power",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26394,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Sealed growing beds",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28612,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Biological scanner",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 35333,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Sealed sample capsule",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25262,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "A city beyond the dust",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25205,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Elysium Plot approach"
+      ]
+    },
+    {
+      "title": "Dock guidance",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12987,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "Elysium Plot approach",
+        "Follow signal →",
+        "příběh",
+        "Elysium Visit station",
+        "↗ Arrival dock 0/4",
+        "Dock guidance"
+      ]
+    },
+    {
+      "title": "Docking tunnel",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24900,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Dock pressure",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32020,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Supply unloading",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 27465,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Reactor cooling",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22785,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Reactor cooling"
+      ]
+    },
+    {
+      "title": "Power distribution",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18706,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Core ignition",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28247,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Core safety checks",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 30,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37719,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Ring bulkhead",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19827,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Ring bulkhead"
+      ]
+    },
+    {
+      "title": "Ring transit",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 15827,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Sector junction",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28219,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Promenade lights",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24562,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Habitat atmosphere",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25263,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Habitat atmosphere"
+      ]
+    },
+    {
+      "title": "Habitat water loop",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28660,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Prepare the apartments",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 30,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37067,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Community lights",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 93263,
+      "attempts": 2,
+      "energyAds": 0,
+      "failedAttempts": [
+        {
+          "movesUsed": 37,
+          "ads": 1,
+          "helpers": [
+            "EMP"
+          ]
+        }
+      ],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 2,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Irrigation beds",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 30,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 40378,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Irrigation beds"
+      ]
+    },
+    {
+      "title": "Dome climate",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 29320,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Plant the living sample",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22135,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Living ecosystem",
+      "budget": 34,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33702,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Observatory optics",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25507,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Observatory optics"
+      ]
+    },
+    {
+      "title": "Station uplink",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 28,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 34390,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Return corridor",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 30,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37979,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Welcome beacon · HARD",
+      "budget": 35,
+      "result": "výhra",
+      "movesUsed": 35,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 41424,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Isolate the echo",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25453,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "příběh"
+      ]
+    },
+    {
+      "title": "Synchronize the clocks",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28891,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Triangulate the source",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 28,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33354,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Prepare the survey flight",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25021,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Wake the relay dish",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20238,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Wake the relay dish"
+      ]
+    },
+    {
+      "title": "Recover the flight recorder",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26885,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Launch the survey probe",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28934,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Tune the transit shield",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32217,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Restore the near anchor",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23023,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Restore the near anchor"
+      ]
+    },
+    {
+      "title": "Align the distant beacons",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 5,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26794,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Secure the return beacon",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28105,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Stabilize the Rift · HARD",
+      "budget": 35,
+      "result": "výhra",
+      "movesUsed": 32,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 41145,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Secure the landing terrace",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23161,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Cross the Rift →",
+        "příběh",
+        "příběh",
+        "Explore the living ring → · 0/6",
+        "Secure the landing terrace"
+      ]
+    },
+    {
+      "title": "Anchor the return signal",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 27595,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Wake the light bridge",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 29534,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Restore the water channels",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 31995,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Read the seed archive",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 31,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 41522,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Awaken the garden heart · HARD",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 36546,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Connect the seed archive",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18121,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "příběh"
+      ]
+    },
+    {
+      "title": "Prepare the specimen chamber",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18437,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Decode the living map",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 28,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 34389,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Trace the human signal",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32766,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Chart the rescue route · HARD",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 83671,
+      "attempts": 2,
+      "energyAds": 0,
+      "failedAttempts": [
+        {
+          "movesUsed": 37,
+          "ads": 1,
+          "helpers": [
+            "EMP"
+          ]
+        }
+      ],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 2,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Wake the signal resonator",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 18436,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Wake the signal resonator"
+      ]
+    },
+    {
+      "title": "Align the relay dish",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 9,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 70757,
+      "attempts": 2,
+      "energyAds": 0,
+      "failedAttempts": [
+        {
+          "movesUsed": 32,
+          "ads": 1,
+          "helpers": [
+            "EMP"
+          ]
+        }
+      ],
+      "notes": [],
+      "helperAd": false,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Recover the broken message",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24975,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Secure the descent corridor · HARD",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 32,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 42443,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Light the landing markers",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 5,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 30436,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "příběh"
+      ]
+    },
+    {
+      "title": "Restore the survey drone",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23583,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Trace the root network",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26418,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Open the stream crossing",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 5,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 81365,
+      "attempts": 2,
+      "energyAds": 0,
+      "failedAttempts": [
+        {
+          "movesUsed": 34,
+          "ads": 1,
+          "helpers": [
+            "EMP"
+          ]
+        }
+      ],
+      "notes": [],
+      "helperAd": false,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Synchronise the glade · HARD",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 40865,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Calibrate the field sampler",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 15732,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Calibrate the field sampler"
+      ]
+    },
+    {
+      "title": "Refill the grove channels",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21684,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Decode the pollen response",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28594,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Link the grove resonator",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32907,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Reveal the root passage · HARD",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 30,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 43758,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Restore the breathing vents",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33116,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Restore the breathing vents"
+      ]
+    },
+    {
+      "title": "Recover the expedition record",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 29975,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Rebalance the seed nursery",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33107,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Tune the caretaker channel",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37470,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Open the sanctuary threshold · HARD",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 28,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37807,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Keep the return beacon open",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25258,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Keep the return beacon open"
+      ]
+    },
+    {
+      "title": "Restore the visitor shelter",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26406,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Align the shared language",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 33,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 45480,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Wake the caretaker memory",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 34,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 45460,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Secure the refuge coordinates · HARD",
+      "budget": 34,
+      "result": "výhra",
+      "movesUsed": 32,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 45018,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "—",
+      "result": "nenalezen další level",
+      "route": [
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh"
+      ]
+    }
+  ],
+  "loadMs": 528,
+  "bytes": 319271,
+  "notes": [],
+  "console": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "issues": [],
+  "screens": [
+    {
+      "label": "uvodni-obrazovka",
+      "file": "reports/shots/desktop-1920-1080-en/00-uvodni-obrazovka.png",
+      "issues": 0
+    },
+    {
+      "label": "lod",
+      "file": "reports/shots/desktop-1920-1080-en/01-lod.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-little-more-light",
+      "file": "reports/shots/desktop-1920-1080-en/02-deska-a-little-more-light.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-safe-barrier",
+      "file": "reports/shots/desktop-1920-1080-en/03-deska-a-safe-barrier.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-holding-steady",
+      "file": "reports/shots/desktop-1920-1080-en/04-deska-holding-steady.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-spark-of-hope",
+      "file": "reports/shots/desktop-1920-1080-en/05-deska-a-spark-of-hope.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-clearer-view",
+      "file": "reports/shots/desktop-1920-1080-en/06-deska-a-clearer-view.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-back-online",
+      "file": "reports/shots/desktop-1920-1080-en/07-deska-back-online.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-what-lies-ahead",
+      "file": "reports/shots/desktop-1920-1080-en/08-deska-what-lies-ahead.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-direction-in-the-noise",
+      "file": "reports/shots/desktop-1920-1080-en/09-deska-a-direction-in-the-noise.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-someone-is-listening",
+      "file": "reports/shots/desktop-1920-1080-en/10-deska-someone-is-listening.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-point-among-the-stars",
+      "file": "reports/shots/desktop-1920-1080-en/11-deska-a-point-among-the-stars.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-course-to-follow",
+      "file": "reports/shots/desktop-1920-1080-en/12-deska-a-course-to-follow.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-breath-of-hope",
+      "file": "reports/shots/desktop-1920-1080-en/13-deska-a-breath-of-hope.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-clear-the-air",
+      "file": "reports/shots/desktop-1920-1080-en/14-deska-clear-the-air.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-somewhere-to-rest",
+      "file": "reports/shots/desktop-1920-1080-en/15-deska-somewhere-to-rest.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-place-to-call-home",
+      "file": "reports/shots/desktop-1920-1080-en/16-deska-a-place-to-call-home.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-every-drop-matters",
+      "file": "reports/shots/desktop-1920-1080-en/17-deska-every-drop-matters.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-keep-it-fresh",
+      "file": "reports/shots/desktop-1920-1080-en/18-deska-keep-it-fresh.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-place-for-everything",
+      "file": "reports/shots/desktop-1920-1080-en/19-deska-a-place-for-everything.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-something-warm",
+      "file": "reports/shots/desktop-1920-1080-en/20-deska-something-warm.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-keep-your-cool",
+      "file": "reports/shots/desktop-1920-1080-en/21-deska-keep-your-cool.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-reserve-of-hope",
+      "file": "reports/shots/desktop-1920-1080-en/22-deska-a-reserve-of-hope.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-beating-heart",
+      "file": "reports/shots/desktop-1920-1080-en/23-deska-a-beating-heart.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-built-to-move",
+      "file": "reports/shots/desktop-1920-1080-en/24-deska-built-to-move.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-steady-and-ready",
+      "file": "reports/shots/desktop-1920-1080-en/25-deska-steady-and-ready.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-skin-for-the-ship",
+      "file": "reports/shots/desktop-1920-1080-en/26-deska-a-skin-for-the-ship.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-ready-on-the-outside",
+      "file": "reports/shots/desktop-1920-1080-en/27-deska-ready-on-the-outside.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-back-on-our-feet",
+      "file": "reports/shots/desktop-1920-1080-en/28-deska-back-on-our-feet.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-enough-to-reach-the-stars",
+      "file": "reports/shots/desktop-1920-1080-en/29-deska-enough-to-reach-the-stars.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-one-last-push",
+      "file": "reports/shots/desktop-1920-1080-en/30-deska-one-last-push.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-safe-approach",
+      "file": "reports/shots/desktop-1920-1080-en/31-deska-a-safe-approach.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-door-into-silence",
+      "file": "reports/shots/desktop-1920-1080-en/32-deska-a-door-into-silence.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-wake-the-station",
+      "file": "reports/shots/desktop-1920-1080-en/33-deska-wake-the-station.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-something-worth-carrying",
+      "file": "reports/shots/desktop-1920-1080-en/34-deska-something-worth-carrying.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-message-beneath-the-loop",
+      "file": "reports/shots/desktop-1920-1080-en/35-deska-a-message-beneath-the-loop.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-bring-it-home",
+      "file": "reports/shots/desktop-1920-1080-en/36-deska-bring-it-home.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-light-in-the-snow",
+      "file": "reports/shots/desktop-1920-1080-en/37-deska-a-light-in-the-snow.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-beyond-the-frost",
+      "file": "reports/shots/desktop-1920-1080-en/38-deska-beyond-the-frost.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-warmth-returns",
+      "file": "reports/shots/desktop-1920-1080-en/39-deska-warmth-returns.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-the-missing-half",
+      "file": "reports/shots/desktop-1920-1080-en/40-deska-the-missing-half.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-listen-without-a-name",
+      "file": "reports/shots/desktop-1920-1080-en/41-deska-listen-without-a-name.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-carry-the-warmth",
+      "file": "reports/shots/desktop-1920-1080-en/42-deska-carry-the-warmth.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-hold-on-to-the-wreck",
+      "file": "reports/shots/desktop-1920-1080-en/43-deska-hold-on-to-the-wreck.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-into-the-archive",
+      "file": "reports/shots/desktop-1920-1080-en/44-deska-into-the-archive.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-borrowed-heartbeat",
+      "file": "reports/shots/desktop-1920-1080-en/45-deska-a-borrowed-heartbeat.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-recover-the-second-half",
+      "file": "reports/shots/desktop-1920-1080-en/46-deska-recover-the-second-half.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-signal-without-a-reply",
+      "file": "reports/shots/desktop-1920-1080-en/47-deska-a-signal-without-a-reply.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-bring-the-record-home",
+      "file": "reports/shots/desktop-1920-1080-en/48-deska-bring-the-record-home.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-place-to-return-to",
+      "file": "reports/shots/desktop-1920-1080-en/49-deska-a-place-to-return-to.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-keep-the-refuge-alive",
+      "file": "reports/shots/desktop-1920-1080-en/50-deska-keep-the-refuge-alive.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-close-the-circle",
+      "file": "reports/shots/desktop-1920-1080-en/51-deska-close-the-circle.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-steady-current",
+      "file": "reports/shots/desktop-1920-1080-en/52-deska-a-steady-current.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-where-the-expedition-went",
+      "file": "reports/shots/desktop-1920-1080-en/53-deska-where-the-expedition-went.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-one-last-alignment-hard",
+      "file": "reports/shots/desktop-1920-1080-en/54-deska-one-last-alignment-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-buoy-power",
+      "file": "reports/shots/desktop-1920-1080-en/55-deska-buoy-power.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-survey-antenna",
+      "file": "reports/shots/desktop-1920-1080-en/56-deska-survey-antenna.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-buoy-flight-record",
+      "file": "reports/shots/desktop-1920-1080-en/57-deska-buoy-flight-record.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-survey-walkway",
+      "file": "reports/shots/desktop-1920-1080-en/58-deska-survey-walkway.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-excavation-generator",
+      "file": "reports/shots/desktop-1920-1080-en/59-deska-excavation-generator.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-sample-drill-controls",
+      "file": "reports/shots/desktop-1920-1080-en/60-deska-sample-drill-controls.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-mineral-spectrometer",
+      "file": "reports/shots/desktop-1920-1080-en/61-deska-mineral-spectrometer.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-protected-ore-sorter",
+      "file": "reports/shots/desktop-1920-1080-en/62-deska-protected-ore-sorter.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-archive-probe",
+      "file": "reports/shots/desktop-1920-1080-en/63-deska-archive-probe.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-research-landing-pad",
+      "file": "reports/shots/desktop-1920-1080-en/64-deska-research-landing-pad.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-water-circulation",
+      "file": "reports/shots/desktop-1920-1080-en/65-deska-water-circulation.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-greenhouse-power",
+      "file": "reports/shots/desktop-1920-1080-en/66-deska-greenhouse-power.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-sealed-growing-beds",
+      "file": "reports/shots/desktop-1920-1080-en/67-deska-sealed-growing-beds.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-biological-scanner",
+      "file": "reports/shots/desktop-1920-1080-en/68-deska-biological-scanner.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-sealed-sample-capsule",
+      "file": "reports/shots/desktop-1920-1080-en/69-deska-sealed-sample-capsule.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-a-city-beyond-the-dust",
+      "file": "reports/shots/desktop-1920-1080-en/70-deska-a-city-beyond-the-dust.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-dock-guidance",
+      "file": "reports/shots/desktop-1920-1080-en/71-deska-dock-guidance.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-docking-tunnel",
+      "file": "reports/shots/desktop-1920-1080-en/72-deska-docking-tunnel.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-dock-pressure",
+      "file": "reports/shots/desktop-1920-1080-en/73-deska-dock-pressure.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-supply-unloading",
+      "file": "reports/shots/desktop-1920-1080-en/74-deska-supply-unloading.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-reactor-cooling",
+      "file": "reports/shots/desktop-1920-1080-en/75-deska-reactor-cooling.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-power-distribution",
+      "file": "reports/shots/desktop-1920-1080-en/76-deska-power-distribution.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-core-ignition",
+      "file": "reports/shots/desktop-1920-1080-en/77-deska-core-ignition.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-core-safety-checks",
+      "file": "reports/shots/desktop-1920-1080-en/78-deska-core-safety-checks.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-ring-bulkhead",
+      "file": "reports/shots/desktop-1920-1080-en/79-deska-ring-bulkhead.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-ring-transit",
+      "file": "reports/shots/desktop-1920-1080-en/80-deska-ring-transit.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-sector-junction",
+      "file": "reports/shots/desktop-1920-1080-en/81-deska-sector-junction.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-promenade-lights",
+      "file": "reports/shots/desktop-1920-1080-en/82-deska-promenade-lights.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-habitat-atmosphere",
+      "file": "reports/shots/desktop-1920-1080-en/83-deska-habitat-atmosphere.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-habitat-water-loop",
+      "file": "reports/shots/desktop-1920-1080-en/84-deska-habitat-water-loop.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-prepare-the-apartments",
+      "file": "reports/shots/desktop-1920-1080-en/85-deska-prepare-the-apartments.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-community-lights",
+      "file": "reports/shots/desktop-1920-1080-en/86-deska-community-lights.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-community-lights",
+      "file": "reports/shots/desktop-1920-1080-en/87-dosly-tahy-community-lights.png",
+      "issues": 0
+    },
+    {
+      "label": "prohra-community-lights",
+      "file": "reports/shots/desktop-1920-1080-en/88-prohra-community-lights.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-irrigation-beds",
+      "file": "reports/shots/desktop-1920-1080-en/89-deska-irrigation-beds.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-irrigation-beds",
+      "file": "reports/shots/desktop-1920-1080-en/90-dosly-tahy-irrigation-beds.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-dome-climate",
+      "file": "reports/shots/desktop-1920-1080-en/91-deska-dome-climate.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-plant-the-living-sample",
+      "file": "reports/shots/desktop-1920-1080-en/92-deska-plant-the-living-sample.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-living-ecosystem",
+      "file": "reports/shots/desktop-1920-1080-en/93-deska-living-ecosystem.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-observatory-optics",
+      "file": "reports/shots/desktop-1920-1080-en/94-deska-observatory-optics.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-station-uplink",
+      "file": "reports/shots/desktop-1920-1080-en/95-deska-station-uplink.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-return-corridor",
+      "file": "reports/shots/desktop-1920-1080-en/96-deska-return-corridor.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-welcome-beacon-hard",
+      "file": "reports/shots/desktop-1920-1080-en/97-deska-welcome-beacon-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-isolate-the-echo",
+      "file": "reports/shots/desktop-1920-1080-en/98-deska-isolate-the-echo.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-synchronize-the-clocks",
+      "file": "reports/shots/desktop-1920-1080-en/99-deska-synchronize-the-clocks.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-triangulate-the-source",
+      "file": "reports/shots/desktop-1920-1080-en/100-deska-triangulate-the-source.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-prepare-the-survey-flight",
+      "file": "reports/shots/desktop-1920-1080-en/101-deska-prepare-the-survey-flight.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-wake-the-relay-dish",
+      "file": "reports/shots/desktop-1920-1080-en/102-deska-wake-the-relay-dish.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-recover-the-flight-recorder",
+      "file": "reports/shots/desktop-1920-1080-en/103-deska-recover-the-flight-recorder.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-launch-the-survey-probe",
+      "file": "reports/shots/desktop-1920-1080-en/104-deska-launch-the-survey-probe.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-tune-the-transit-shield",
+      "file": "reports/shots/desktop-1920-1080-en/105-deska-tune-the-transit-shield.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-restore-the-near-anchor",
+      "file": "reports/shots/desktop-1920-1080-en/106-deska-restore-the-near-anchor.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-align-the-distant-beacons",
+      "file": "reports/shots/desktop-1920-1080-en/107-deska-align-the-distant-beacons.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-secure-the-return-beacon",
+      "file": "reports/shots/desktop-1920-1080-en/108-deska-secure-the-return-beacon.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-stabilize-the-rift-hard",
+      "file": "reports/shots/desktop-1920-1080-en/109-deska-stabilize-the-rift-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-secure-the-landing-terrace",
+      "file": "reports/shots/desktop-1920-1080-en/110-deska-secure-the-landing-terrace.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-anchor-the-return-signal",
+      "file": "reports/shots/desktop-1920-1080-en/111-deska-anchor-the-return-signal.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-wake-the-light-bridge",
+      "file": "reports/shots/desktop-1920-1080-en/112-deska-wake-the-light-bridge.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-restore-the-water-channels",
+      "file": "reports/shots/desktop-1920-1080-en/113-deska-restore-the-water-channels.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-read-the-seed-archive",
+      "file": "reports/shots/desktop-1920-1080-en/114-deska-read-the-seed-archive.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-read-the-seed-archive",
+      "file": "reports/shots/desktop-1920-1080-en/115-dosly-tahy-read-the-seed-archive.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-awaken-the-garden-heart-hard",
+      "file": "reports/shots/desktop-1920-1080-en/116-deska-awaken-the-garden-heart-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-connect-the-seed-archive",
+      "file": "reports/shots/desktop-1920-1080-en/117-deska-connect-the-seed-archive.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-prepare-the-specimen-chamber",
+      "file": "reports/shots/desktop-1920-1080-en/118-deska-prepare-the-specimen-chamber.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-decode-the-living-map",
+      "file": "reports/shots/desktop-1920-1080-en/119-deska-decode-the-living-map.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-decode-the-living-map",
+      "file": "reports/shots/desktop-1920-1080-en/120-dosly-tahy-decode-the-living-map.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-trace-the-human-signal",
+      "file": "reports/shots/desktop-1920-1080-en/121-deska-trace-the-human-signal.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-chart-the-rescue-route-hard",
+      "file": "reports/shots/desktop-1920-1080-en/122-deska-chart-the-rescue-route-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-chart-the-rescue-route-hard",
+      "file": "reports/shots/desktop-1920-1080-en/123-dosly-tahy-chart-the-rescue-route-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "prohra-chart-the-rescue-route-hard",
+      "file": "reports/shots/desktop-1920-1080-en/124-prohra-chart-the-rescue-route-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-wake-the-signal-resonator",
+      "file": "reports/shots/desktop-1920-1080-en/125-deska-wake-the-signal-resonator.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-align-the-relay-dish",
+      "file": "reports/shots/desktop-1920-1080-en/126-deska-align-the-relay-dish.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-align-the-relay-dish",
+      "file": "reports/shots/desktop-1920-1080-en/127-dosly-tahy-align-the-relay-dish.png",
+      "issues": 0
+    },
+    {
+      "label": "prohra-align-the-relay-dish",
+      "file": "reports/shots/desktop-1920-1080-en/128-prohra-align-the-relay-dish.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-recover-the-broken-message",
+      "file": "reports/shots/desktop-1920-1080-en/129-deska-recover-the-broken-message.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-secure-the-descent-corridor-hard",
+      "file": "reports/shots/desktop-1920-1080-en/130-deska-secure-the-descent-corridor-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-light-the-landing-markers",
+      "file": "reports/shots/desktop-1920-1080-en/131-deska-light-the-landing-markers.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-restore-the-survey-drone",
+      "file": "reports/shots/desktop-1920-1080-en/132-deska-restore-the-survey-drone.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-trace-the-root-network",
+      "file": "reports/shots/desktop-1920-1080-en/133-deska-trace-the-root-network.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-open-the-stream-crossing",
+      "file": "reports/shots/desktop-1920-1080-en/134-deska-open-the-stream-crossing.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-open-the-stream-crossing",
+      "file": "reports/shots/desktop-1920-1080-en/135-dosly-tahy-open-the-stream-crossing.png",
+      "issues": 0
+    },
+    {
+      "label": "prohra-open-the-stream-crossing",
+      "file": "reports/shots/desktop-1920-1080-en/136-prohra-open-the-stream-crossing.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-synchronise-the-glade-hard",
+      "file": "reports/shots/desktop-1920-1080-en/137-deska-synchronise-the-glade-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-calibrate-the-field-sampler",
+      "file": "reports/shots/desktop-1920-1080-en/138-deska-calibrate-the-field-sampler.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-refill-the-grove-channels",
+      "file": "reports/shots/desktop-1920-1080-en/139-deska-refill-the-grove-channels.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-decode-the-pollen-response",
+      "file": "reports/shots/desktop-1920-1080-en/140-deska-decode-the-pollen-response.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-link-the-grove-resonator",
+      "file": "reports/shots/desktop-1920-1080-en/141-deska-link-the-grove-resonator.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-reveal-the-root-passage-hard",
+      "file": "reports/shots/desktop-1920-1080-en/142-deska-reveal-the-root-passage-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-restore-the-breathing-vents",
+      "file": "reports/shots/desktop-1920-1080-en/143-deska-restore-the-breathing-vents.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-recover-the-expedition-record",
+      "file": "reports/shots/desktop-1920-1080-en/144-deska-recover-the-expedition-record.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-rebalance-the-seed-nursery",
+      "file": "reports/shots/desktop-1920-1080-en/145-deska-rebalance-the-seed-nursery.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-tune-the-caretaker-channel",
+      "file": "reports/shots/desktop-1920-1080-en/146-deska-tune-the-caretaker-channel.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-open-the-sanctuary-threshold-hard",
+      "file": "reports/shots/desktop-1920-1080-en/147-deska-open-the-sanctuary-threshold-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-keep-the-return-beacon-open",
+      "file": "reports/shots/desktop-1920-1080-en/148-deska-keep-the-return-beacon-open.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-restore-the-visitor-shelter",
+      "file": "reports/shots/desktop-1920-1080-en/149-deska-restore-the-visitor-shelter.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-align-the-shared-language",
+      "file": "reports/shots/desktop-1920-1080-en/150-deska-align-the-shared-language.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-align-the-shared-language",
+      "file": "reports/shots/desktop-1920-1080-en/151-dosly-tahy-align-the-shared-language.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-wake-the-caretaker-memory",
+      "file": "reports/shots/desktop-1920-1080-en/152-deska-wake-the-caretaker-memory.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-wake-the-caretaker-memory",
+      "file": "reports/shots/desktop-1920-1080-en/153-dosly-tahy-wake-the-caretaker-memory.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-secure-the-refuge-coordinates-hard",
+      "file": "reports/shots/desktop-1920-1080-en/154-deska-secure-the-refuge-coordinates-hard.png",
+      "issues": 0
+    },
+    {
+      "label": "nenalezen-level",
+      "file": "reports/shots/desktop-1920-1080-en/155-nenalezen-level.png",
+      "issues": 0
+    },
+    {
+      "label": "konec",
+      "file": "reports/shots/desktop-1920-1080-en/156-konec.png",
+      "issues": 0
+    }
+  ]
+}

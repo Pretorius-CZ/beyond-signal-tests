@@ -1,0 +1,117 @@
+{
+  "project": "iPad Mini",
+  "language": "cs",
+  "mode": "full",
+  "botId": "f58e7fd5-50ed-492c-8b7f-b7049170ab3b",
+  "analytics": true,
+  "viewport": {
+    "width": 768,
+    "height": 1024
+  },
+  "startedAt": "2026-10-15T08:43:02.744Z",
+  "levels": [
+    {
+      "title": "O trochu víc světla",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 2,
+      "stalls": 0,
+      "durationMs": 63426,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": []
+    },
+    {
+      "title": "Bezpečná přepážka",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 33169,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Vnitřní průlez"
+      ]
+    },
+    {
+      "title": "Tlak drží",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "Beam"
+      ],
+      "boostersFired": 0,
+      "tutorials": 2,
+      "stalls": 0,
+      "durationMs": 37000,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Těsnění komory"
+      ]
+    },
+    {
+      "title": "Jiskra naděje",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32591,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Nouzová světla"
+      ]
+    },
+    {
+      "title": "Jasnější výhled",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 40408,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Těsnění oken"
+      ]
+    }
+  ],
+  "loadMs": 808,
+  "bytes": 4315578
+}

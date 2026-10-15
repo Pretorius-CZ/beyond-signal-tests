@@ -1,0 +1,178 @@
+{
+  "project": "iPad Mini",
+  "language": "en",
+  "mode": "full",
+  "botId": "66c7e892-8601-46ee-98ad-1358af88a14e",
+  "analytics": true,
+  "viewport": {
+    "width": 768,
+    "height": 1024
+  },
+  "startedAt": "2026-10-15T08:42:50.337Z",
+  "levels": [
+    {
+      "title": "A little more light",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 46399,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": []
+    },
+    {
+      "title": "A safe barrier",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 33470,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Inner hatch"
+      ]
+    },
+    {
+      "title": "Holding steady",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "Beam"
+      ],
+      "boostersFired": 0,
+      "tutorials": 2,
+      "stalls": 0,
+      "durationMs": 36949,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Airlock seals"
+      ]
+    },
+    {
+      "title": "A spark of hope",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 47246,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Emergency lights"
+      ]
+    },
+    {
+      "title": "A clearer view",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37149,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Window seals"
+      ]
+    },
+    {
+      "title": "Back online",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 80413,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Flight computer"
+      ]
+    },
+    {
+      "title": "What lies ahead",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 98123,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Ship diagnostics"
+      ]
+    },
+    {
+      "title": "A direction in the noise",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 35738,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Open navigation console",
+        "Signal antenna"
+      ]
+    }
+  ],
+  "loadMs": 642,
+  "bytes": 518730
+}

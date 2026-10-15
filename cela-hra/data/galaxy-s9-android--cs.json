@@ -1,0 +1,3807 @@
+{
+  "project": "Galaxy S9+ (Android)",
+  "language": "cs",
+  "mode": "full",
+  "botId": "5c823b1e-130a-4f9d-91f8-27307d104e1b",
+  "analytics": true,
+  "viewport": {
+    "width": 320,
+    "height": 658
+  },
+  "startedAt": "2026-10-15T08:42:48.219Z",
+  "levels": [
+    {
+      "title": "O trochu víc světla",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 13671,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": []
+    },
+    {
+      "title": "Bezpečná přepážka",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 5,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 8305,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Vnitřní průlez"
+      ]
+    },
+    {
+      "title": "Tlak drží",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 5,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 2,
+      "stalls": 0,
+      "durationMs": 9753,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Těsnění komory"
+      ]
+    },
+    {
+      "title": "Jiskra naděje",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14982,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Nouzová světla"
+      ]
+    },
+    {
+      "title": "Jasnější výhled",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 16265,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Těsnění oken"
+      ]
+    },
+    {
+      "title": "Znovu v provozu",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "Beam"
+      ],
+      "boostersFired": 2,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 30763,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Letový počítač"
+      ]
+    },
+    {
+      "title": "Co nás čeká",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "Laser"
+      ],
+      "boostersFired": 0,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 32606,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Diagnostika lodi"
+      ]
+    },
+    {
+      "title": "Směr v šumu",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14169,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Otevřít navigační konzoli",
+        "Signální anténa"
+      ]
+    },
+    {
+      "title": "Někdo naslouchá",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 9121,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Komunikace"
+      ]
+    },
+    {
+      "title": "Bod mezi hvězdami",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19345,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Hvězdná mapa"
+      ]
+    },
+    {
+      "title": "Kurz před námi",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12573,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Letová trasa"
+      ]
+    },
+    {
+      "title": "Nádech naděje",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12419,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Vstoupit do ubikací",
+        "Ventilace"
+      ]
+    },
+    {
+      "title": "Čistý vzduch",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12972,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Vzduchové filtry"
+      ]
+    },
+    {
+      "title": "Kde si odpočinout",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21221,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Lůžko"
+      ]
+    },
+    {
+      "title": "Místo zvané domov",
+      "budget": 18,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 6,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 55735,
+      "attempts": 2,
+      "energyAds": 0,
+      "failedAttempts": [
+        {
+          "movesUsed": 23,
+          "ads": 1,
+          "helpers": [
+            "EMP"
+          ]
+        }
+      ],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 2,
+      "route": [
+        "příběh",
+        "Vybavení kajuty"
+      ]
+    },
+    {
+      "title": "Každá kapka se počítá",
+      "budget": 12,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14638,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Vstoupit do kuchyňky",
+        "Vodní systém"
+      ]
+    },
+    {
+      "title": "Udržet čerstvé",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 10454,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Chladicí box"
+      ]
+    },
+    {
+      "title": "Místo pro všechno",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21569,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Police na zásoby"
+      ]
+    },
+    {
+      "title": "Něco teplého",
+      "budget": 13,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 11871,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Kuchyňská linka"
+      ]
+    },
+    {
+      "title": "Zachovat chladnou hlavu",
+      "budget": 19,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12374,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Vstoupit do strojovny",
+        "Chladicí okruh"
+      ]
+    },
+    {
+      "title": "Zásoba naděje",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14989,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Palivový systém"
+      ]
+    },
+    {
+      "title": "Tlukoucí srdce",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 27003,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Hlavní napájení"
+      ]
+    },
+    {
+      "title": "Stvořeno k pohybu",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25854,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Sestava motoru"
+      ]
+    },
+    {
+      "title": "Stabilní a připravené",
+      "budget": 13,
+      "result": "výhra",
+      "movesUsed": 10,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13138,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Zkouška systémů"
+      ]
+    },
+    {
+      "title": "Plášť pro loď",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14638,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Panely pláště"
+      ]
+    },
+    {
+      "title": "Připravené i zvenku",
+      "budget": 11,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 9446,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Motorové gondoly"
+      ]
+    },
+    {
+      "title": "Znovu na nohou",
+      "budget": 18,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18989,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Podvozek"
+      ]
+    },
+    {
+      "title": "Dost paliva ke hvězdám",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 5,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20539,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Nouzové palivové depo"
+      ]
+    },
+    {
+      "title": "Poslední úsilí",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23688,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Spustit závěrečnou předletovou zkoušku"
+      ]
+    },
+    {
+      "title": "Bezpečné přiblížení",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 13293,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "Odletět",
+        "příběh",
+        "příběh",
+        "Tichý důl 0/6",
+        "Přistávací majáky"
+      ]
+    },
+    {
+      "title": "Dveře do ticha",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 14501,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Probudit stanici",
+      "budget": 17,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22537,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Něco, co stojí za odvoz",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18869,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zpráva za opakovaným voláním",
+      "budget": 17,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17853,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Odvézt domů",
+      "budget": 19,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22000,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Světlo ve sněhu",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12370,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Dálkový skener Aktivovat skener",
+        "Ledová stanice 0/6",
+        "Přibližovací majáky"
+      ]
+    },
+    {
+      "title": "Za námrazou",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17954,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Teplo se vrací",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17684,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Chybějící polovina",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17717,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Naslouchat beze jména",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 27821,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Odvézt teplo",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33130,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Přidržet se vraku",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 8,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 9388,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Unášený archiv 0/6",
+        "Dokovací svorky"
+      ]
+    },
+    {
+      "title": "Do archivu",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 11,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 12654,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Vypůjčený tep",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18036,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Obnovit druhou polovinu",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 15366,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Signál bez odpovědi",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22967,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Odvézt záznam domů",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28991,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Místo k návratu",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22639,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Vnější dok"
+      ]
+    },
+    {
+      "title": "Udržet útočiště při životě",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18155,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Uzavřít kruh",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20987,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Stálý proud",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26281,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Kam výprava odešla",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28315,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Poslední seřízení · TĚŽKÉ",
+      "budget": 34,
+      "result": "výhra",
+      "movesUsed": 31,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 36477,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Napájení bóje",
+      "budget": 22,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 15351,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "příběh",
+        "příběh",
+        "Průzkumná bóje 0/3",
+        "Napájení bóje"
+      ]
+    },
+    {
+      "title": "Průzkumná anténa",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17697,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Letový záznam bóje",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23879,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Průzkumná lávka",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 12,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 15555,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Rozlámaný měsíc 0/6",
+        "Průzkumná lávka"
+      ]
+    },
+    {
+      "title": "Generátor průzkumného tábora",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21202,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Ovládání vzorkovacího vrtáku",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28104,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Minerální spektrometr",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23049,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Chráněná třídička rudy",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 7,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 70765,
+      "attempts": 2,
+      "energyAds": 0,
+      "failedAttempts": [
+        {
+          "movesUsed": 34,
+          "ads": 1,
+          "helpers": [
+            "EMP"
+          ]
+        }
+      ],
+      "notes": [],
+      "helperAd": false,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Archivní sonda",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33253,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Přistávací plošina",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17377,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Zelený svět 0/6",
+        "Přistávací plošina"
+      ]
+    },
+    {
+      "title": "Oběh vody",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17634,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Napájení skleníku",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25808,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Uzavřené záhony",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 27796,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Biologický skener",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 29892,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Uzavřená kapsle vzorku",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28724,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Město za prachem",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 30399,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh",
+        "Elysium Zaměřit přílet"
+      ]
+    },
+    {
+      "title": "Navádění do doku",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 15050,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "Elysium Zaměřit přílet",
+        "Sledovat signál →",
+        "příběh",
+        "Elysium Navštívit stanici",
+        "↗ Příletový dok 0/4",
+        "Navádění do doku"
+      ]
+    },
+    {
+      "title": "Spojovací tunel",
+      "budget": 26,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18466,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Tlak v doku",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26802,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Vyložení vybavení",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21032,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Chlazení reaktoru",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23200,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Chlazení reaktoru"
+      ]
+    },
+    {
+      "title": "Rozvod energie",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19385,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Spuštění jádra",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20951,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Bezpečnostní kontrola jádra",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22731,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Přepážka prstence",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18205,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Přepážka prstence"
+      ]
+    },
+    {
+      "title": "Doprava v prstenci",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 5,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24085,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Propojení sektorů",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 31875,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Osvětlení promenády",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 35064,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Atmosféra obytného sektoru",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 18482,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Atmosféra obytného sektoru"
+      ]
+    },
+    {
+      "title": "Vodní okruh obytného sektoru",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20885,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Připravit byty",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 28,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 30793,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Světla společných prostor",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26933,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zavlažovací záhony",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20348,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Zavlažovací záhony"
+      ]
+    },
+    {
+      "title": "Klima pod kopulí",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22099,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zasadit živý vzorek",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33816,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Živý ekosystém",
+      "budget": 34,
+      "result": "výhra",
+      "movesUsed": 31,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37117,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Optika observatoře",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25259,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Optika observatoře"
+      ]
+    },
+    {
+      "title": "Spojení stanice",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23936,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Návratový koridor",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 31,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 34742,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Uvítací maják · TĚŽKÉ",
+      "budget": 35,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24686,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Odděl ozvěnu",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 14,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19053,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "příběh"
+      ]
+    },
+    {
+      "title": "Srovnej hodiny",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 15,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20635,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zaměř zdroj",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 29893,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Připrav průzkumný let",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 34943,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Probuď spojovací anténu",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21481,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Probuď spojovací anténu"
+      ]
+    },
+    {
+      "title": "Obnov letový záznamník",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21532,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Vyšli průzkumnou sondu",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 6,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23818,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Vylaď průletový štít",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22824,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Obnov blízkou kotvu",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24682,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Obnov blízkou kotvu"
+      ]
+    },
+    {
+      "title": "Slaď vzdálené majáky",
+      "budget": 31,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22009,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zajisti zpáteční maják",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 30643,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Stabilizuj Trhlinu · TĚŽKÉ",
+      "budget": 35,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33794,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zajisti přistávací terasu",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21777,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Proletět Trhlinou →",
+        "příběh",
+        "příběh",
+        "Prozkoumat živý prstenec → · 0/6",
+        "Zajisti přistávací terasu"
+      ]
+    },
+    {
+      "title": "Ukotvi zpáteční signál",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28084,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Probuď světelný most",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 28,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 34012,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Obnov vodní kanály",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 21096,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Přečti semenný archiv",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33234,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Probuď srdce zahrady · TĚŽKÉ",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37235,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Připoj semenný archiv",
+      "budget": 23,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 20996,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "příběh"
+      ]
+    },
+    {
+      "title": "Připrav komoru pro vzorek",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 21,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 27832,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Rozlušti živou mapu",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 23,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26287,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Vystopuj lidský signál",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 30,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33132,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Vytyč záchrannou trasu · TĚŽKÉ",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 31,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 5,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37320,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Probuď signální rezonátor",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 12,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 16036,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Probuď signální rezonátor"
+      ]
+    },
+    {
+      "title": "Nasměruj anténu",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 16,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24726,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Obnov přerušenou zprávu",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 26,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 30565,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zajisti sestupový koridor · TĚŽKÉ",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 42223,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Rozsviť přistávací značky",
+      "budget": 24,
+      "result": "výhra",
+      "movesUsed": 13,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 17623,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "příběh"
+      ]
+    },
+    {
+      "title": "Obnov průzkumnou sondu",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 17,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 4,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 22891,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zmapuj kořenovou síť",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 18,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 19009,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Otevři cestu přes potok",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 29,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37683,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Slaď mýtinu · TĚŽKÉ",
+      "budget": 32,
+      "result": "výhra",
+      "movesUsed": 32,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 44628,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Seřiď terénní vzorkovač",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 20,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23958,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Seřiď terénní vzorkovač"
+      ]
+    },
+    {
+      "title": "Naplň kanály porostu",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 24698,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Rozlušti odpověď pylu",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 28240,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Propoj rezonátor porostu",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 37023,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Odhal kořenový průchod · TĚŽKÉ",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33083,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Obnov větrací průduchy",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 19,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 23825,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Obnov větrací průduchy"
+      ]
+    },
+    {
+      "title": "Obnov záznam výpravy",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 24,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 29123,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Vyvaž semennou komoru",
+      "budget": 28,
+      "result": "výhra",
+      "movesUsed": 25,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33491,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Nalaď kanál správce",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 35841,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Otevři vstup do svatyně · TĚŽKÉ",
+      "budget": 33,
+      "result": "výhra",
+      "movesUsed": 30,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 40446,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Udržuj zpáteční maják v provozu",
+      "budget": 25,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 26783,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Udržuj zpáteční maják v provozu"
+      ]
+    },
+    {
+      "title": "Obnov úkryt návštěvníků",
+      "budget": 27,
+      "result": "výhra",
+      "movesUsed": 22,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 25590,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Slaď společný jazyk",
+      "budget": 29,
+      "result": "výhra",
+      "movesUsed": 27,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 1,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 33581,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Probuď paměť správce",
+      "budget": 30,
+      "result": "výhra",
+      "movesUsed": 34,
+      "adsWatched": 1,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 44133,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "Zajisti souřadnice Útočiště · TĚŽKÉ",
+      "budget": 34,
+      "result": "výhra",
+      "movesUsed": 32,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 43093,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "helperAd": true,
+      "pendingAd": null,
+      "adsForHelpers": 1,
+      "route": [
+        "příběh"
+      ]
+    },
+    {
+      "title": "—",
+      "result": "nenalezen další level",
+      "route": [
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh",
+        "příběh"
+      ]
+    }
+  ],
+  "loadMs": 449,
+  "bytes": 319271,
+  "notes": [],
+  "console": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "issues": [],
+  "screens": [
+    {
+      "label": "uvodni-obrazovka",
+      "file": "reports/shots/galaxy-s9-android-cs/00-uvodni-obrazovka.png",
+      "issues": 0
+    },
+    {
+      "label": "lod",
+      "file": "reports/shots/galaxy-s9-android-cs/01-lod.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-o-trochu-vic-svetla",
+      "file": "reports/shots/galaxy-s9-android-cs/02-deska-o-trochu-vic-svetla.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-bezpecna-prepazka",
+      "file": "reports/shots/galaxy-s9-android-cs/03-deska-bezpecna-prepazka.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-tlak-drzi",
+      "file": "reports/shots/galaxy-s9-android-cs/04-deska-tlak-drzi.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-jiskra-nadeje",
+      "file": "reports/shots/galaxy-s9-android-cs/05-deska-jiskra-nadeje.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-jasnejsi-vyhled",
+      "file": "reports/shots/galaxy-s9-android-cs/06-deska-jasnejsi-vyhled.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-znovu-v-provozu",
+      "file": "reports/shots/galaxy-s9-android-cs/07-deska-znovu-v-provozu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-co-nas-ceka",
+      "file": "reports/shots/galaxy-s9-android-cs/08-deska-co-nas-ceka.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-smer-v-sumu",
+      "file": "reports/shots/galaxy-s9-android-cs/09-deska-smer-v-sumu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-nekdo-nasloucha",
+      "file": "reports/shots/galaxy-s9-android-cs/10-deska-nekdo-nasloucha.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-bod-mezi-hvezdami",
+      "file": "reports/shots/galaxy-s9-android-cs/11-deska-bod-mezi-hvezdami.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-kurz-pred-nami",
+      "file": "reports/shots/galaxy-s9-android-cs/12-deska-kurz-pred-nami.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-nadech-nadeje",
+      "file": "reports/shots/galaxy-s9-android-cs/13-deska-nadech-nadeje.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-cisty-vzduch",
+      "file": "reports/shots/galaxy-s9-android-cs/14-deska-cisty-vzduch.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-kde-si-odpocinout",
+      "file": "reports/shots/galaxy-s9-android-cs/15-deska-kde-si-odpocinout.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-misto-zvane-domov",
+      "file": "reports/shots/galaxy-s9-android-cs/16-deska-misto-zvane-domov.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-misto-zvane-domov",
+      "file": "reports/shots/galaxy-s9-android-cs/17-dosly-tahy-misto-zvane-domov.png",
+      "issues": 0
+    },
+    {
+      "label": "prohra-misto-zvane-domov",
+      "file": "reports/shots/galaxy-s9-android-cs/18-prohra-misto-zvane-domov.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-kazda-kapka-se-pocita",
+      "file": "reports/shots/galaxy-s9-android-cs/19-deska-kazda-kapka-se-pocita.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-udrzet-cerstve",
+      "file": "reports/shots/galaxy-s9-android-cs/20-deska-udrzet-cerstve.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-misto-pro-vsechno",
+      "file": "reports/shots/galaxy-s9-android-cs/21-deska-misto-pro-vsechno.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-neco-tepleho",
+      "file": "reports/shots/galaxy-s9-android-cs/22-deska-neco-tepleho.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zachovat-chladnou-hlavu",
+      "file": "reports/shots/galaxy-s9-android-cs/23-deska-zachovat-chladnou-hlavu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zasoba-nadeje",
+      "file": "reports/shots/galaxy-s9-android-cs/24-deska-zasoba-nadeje.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-tlukouci-srdce",
+      "file": "reports/shots/galaxy-s9-android-cs/25-deska-tlukouci-srdce.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-stvoreno-k-pohybu",
+      "file": "reports/shots/galaxy-s9-android-cs/26-deska-stvoreno-k-pohybu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-stabilni-a-pripravene",
+      "file": "reports/shots/galaxy-s9-android-cs/27-deska-stabilni-a-pripravene.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-plast-pro-lod",
+      "file": "reports/shots/galaxy-s9-android-cs/28-deska-plast-pro-lod.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-pripravene-i-zvenku",
+      "file": "reports/shots/galaxy-s9-android-cs/29-deska-pripravene-i-zvenku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-znovu-na-nohou",
+      "file": "reports/shots/galaxy-s9-android-cs/30-deska-znovu-na-nohou.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-dost-paliva-ke-hvezdam",
+      "file": "reports/shots/galaxy-s9-android-cs/31-deska-dost-paliva-ke-hvezdam.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-posledni-usili",
+      "file": "reports/shots/galaxy-s9-android-cs/32-deska-posledni-usili.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-bezpecne-priblizeni",
+      "file": "reports/shots/galaxy-s9-android-cs/33-deska-bezpecne-priblizeni.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-dvere-do-ticha",
+      "file": "reports/shots/galaxy-s9-android-cs/34-deska-dvere-do-ticha.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-probudit-stanici",
+      "file": "reports/shots/galaxy-s9-android-cs/35-deska-probudit-stanici.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-neco-co-stoji-za-odvoz",
+      "file": "reports/shots/galaxy-s9-android-cs/36-deska-neco-co-stoji-za-odvoz.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zprava-za-opakovanym-volanim",
+      "file": "reports/shots/galaxy-s9-android-cs/37-deska-zprava-za-opakovanym-volanim.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-odvezt-domu",
+      "file": "reports/shots/galaxy-s9-android-cs/38-deska-odvezt-domu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-svetlo-ve-snehu",
+      "file": "reports/shots/galaxy-s9-android-cs/39-deska-svetlo-ve-snehu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-za-namrazou",
+      "file": "reports/shots/galaxy-s9-android-cs/40-deska-za-namrazou.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-teplo-se-vraci",
+      "file": "reports/shots/galaxy-s9-android-cs/41-deska-teplo-se-vraci.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-chybejici-polovina",
+      "file": "reports/shots/galaxy-s9-android-cs/42-deska-chybejici-polovina.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-naslouchat-beze-jmena",
+      "file": "reports/shots/galaxy-s9-android-cs/43-deska-naslouchat-beze-jmena.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-odvezt-teplo",
+      "file": "reports/shots/galaxy-s9-android-cs/44-deska-odvezt-teplo.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-pridrzet-se-vraku",
+      "file": "reports/shots/galaxy-s9-android-cs/45-deska-pridrzet-se-vraku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-do-archivu",
+      "file": "reports/shots/galaxy-s9-android-cs/46-deska-do-archivu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vypujceny-tep",
+      "file": "reports/shots/galaxy-s9-android-cs/47-deska-vypujceny-tep.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnovit-druhou-polovinu",
+      "file": "reports/shots/galaxy-s9-android-cs/48-deska-obnovit-druhou-polovinu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-signal-bez-odpovedi",
+      "file": "reports/shots/galaxy-s9-android-cs/49-deska-signal-bez-odpovedi.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-odvezt-zaznam-domu",
+      "file": "reports/shots/galaxy-s9-android-cs/50-deska-odvezt-zaznam-domu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-misto-k-navratu",
+      "file": "reports/shots/galaxy-s9-android-cs/51-deska-misto-k-navratu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-udrzet-utociste-pri-zivote",
+      "file": "reports/shots/galaxy-s9-android-cs/52-deska-udrzet-utociste-pri-zivote.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-uzavrit-kruh",
+      "file": "reports/shots/galaxy-s9-android-cs/53-deska-uzavrit-kruh.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-staly-proud",
+      "file": "reports/shots/galaxy-s9-android-cs/54-deska-staly-proud.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-kam-vyprava-odesla",
+      "file": "reports/shots/galaxy-s9-android-cs/55-deska-kam-vyprava-odesla.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-posledni-serizeni-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/56-deska-posledni-serizeni-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-napajeni-boje",
+      "file": "reports/shots/galaxy-s9-android-cs/57-deska-napajeni-boje.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-pruzkumna-antena",
+      "file": "reports/shots/galaxy-s9-android-cs/58-deska-pruzkumna-antena.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-letovy-zaznam-boje",
+      "file": "reports/shots/galaxy-s9-android-cs/59-deska-letovy-zaznam-boje.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-pruzkumna-lavka",
+      "file": "reports/shots/galaxy-s9-android-cs/60-deska-pruzkumna-lavka.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-generator-pruzkumneho-tabora",
+      "file": "reports/shots/galaxy-s9-android-cs/61-deska-generator-pruzkumneho-tabora.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-ovladani-vzorkovaciho-vrtaku",
+      "file": "reports/shots/galaxy-s9-android-cs/62-deska-ovladani-vzorkovaciho-vrtaku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-mineralni-spektrometr",
+      "file": "reports/shots/galaxy-s9-android-cs/63-deska-mineralni-spektrometr.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-chranena-tridicka-rudy",
+      "file": "reports/shots/galaxy-s9-android-cs/64-deska-chranena-tridicka-rudy.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-chranena-tridicka-rudy",
+      "file": "reports/shots/galaxy-s9-android-cs/65-dosly-tahy-chranena-tridicka-rudy.png",
+      "issues": 0
+    },
+    {
+      "label": "prohra-chranena-tridicka-rudy",
+      "file": "reports/shots/galaxy-s9-android-cs/66-prohra-chranena-tridicka-rudy.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-archivni-sonda",
+      "file": "reports/shots/galaxy-s9-android-cs/67-deska-archivni-sonda.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-pristavaci-plosina",
+      "file": "reports/shots/galaxy-s9-android-cs/68-deska-pristavaci-plosina.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obeh-vody",
+      "file": "reports/shots/galaxy-s9-android-cs/69-deska-obeh-vody.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-napajeni-skleniku",
+      "file": "reports/shots/galaxy-s9-android-cs/70-deska-napajeni-skleniku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-uzavrene-zahony",
+      "file": "reports/shots/galaxy-s9-android-cs/71-deska-uzavrene-zahony.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-biologicky-skener",
+      "file": "reports/shots/galaxy-s9-android-cs/72-deska-biologicky-skener.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-uzavrena-kapsle-vzorku",
+      "file": "reports/shots/galaxy-s9-android-cs/73-deska-uzavrena-kapsle-vzorku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-mesto-za-prachem",
+      "file": "reports/shots/galaxy-s9-android-cs/74-deska-mesto-za-prachem.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-navadeni-do-doku",
+      "file": "reports/shots/galaxy-s9-android-cs/75-deska-navadeni-do-doku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-spojovaci-tunel",
+      "file": "reports/shots/galaxy-s9-android-cs/76-deska-spojovaci-tunel.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-tlak-v-doku",
+      "file": "reports/shots/galaxy-s9-android-cs/77-deska-tlak-v-doku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vylozeni-vybaveni",
+      "file": "reports/shots/galaxy-s9-android-cs/78-deska-vylozeni-vybaveni.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-chlazeni-reaktoru",
+      "file": "reports/shots/galaxy-s9-android-cs/79-deska-chlazeni-reaktoru.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-rozvod-energie",
+      "file": "reports/shots/galaxy-s9-android-cs/80-deska-rozvod-energie.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-spusteni-jadra",
+      "file": "reports/shots/galaxy-s9-android-cs/81-deska-spusteni-jadra.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-bezpecnostni-kontrola-jadra",
+      "file": "reports/shots/galaxy-s9-android-cs/82-deska-bezpecnostni-kontrola-jadra.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-prepazka-prstence",
+      "file": "reports/shots/galaxy-s9-android-cs/83-deska-prepazka-prstence.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-doprava-v-prstenci",
+      "file": "reports/shots/galaxy-s9-android-cs/84-deska-doprava-v-prstenci.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-propojeni-sektoru",
+      "file": "reports/shots/galaxy-s9-android-cs/85-deska-propojeni-sektoru.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-osvetleni-promenady",
+      "file": "reports/shots/galaxy-s9-android-cs/86-deska-osvetleni-promenady.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-atmosfera-obytneho-sektoru",
+      "file": "reports/shots/galaxy-s9-android-cs/87-deska-atmosfera-obytneho-sektoru.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vodni-okruh-obytneho-sektoru",
+      "file": "reports/shots/galaxy-s9-android-cs/88-deska-vodni-okruh-obytneho-sektoru.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-pripravit-byty",
+      "file": "reports/shots/galaxy-s9-android-cs/89-deska-pripravit-byty.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-svetla-spolecnych-prostor",
+      "file": "reports/shots/galaxy-s9-android-cs/90-deska-svetla-spolecnych-prostor.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zavlazovaci-zahony",
+      "file": "reports/shots/galaxy-s9-android-cs/91-deska-zavlazovaci-zahony.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-klima-pod-kopuli",
+      "file": "reports/shots/galaxy-s9-android-cs/92-deska-klima-pod-kopuli.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zasadit-zivy-vzorek",
+      "file": "reports/shots/galaxy-s9-android-cs/93-deska-zasadit-zivy-vzorek.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zivy-ekosystem",
+      "file": "reports/shots/galaxy-s9-android-cs/94-deska-zivy-ekosystem.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-optika-observatore",
+      "file": "reports/shots/galaxy-s9-android-cs/95-deska-optika-observatore.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-spojeni-stanice",
+      "file": "reports/shots/galaxy-s9-android-cs/96-deska-spojeni-stanice.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-navratovy-koridor",
+      "file": "reports/shots/galaxy-s9-android-cs/97-deska-navratovy-koridor.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-uvitaci-majak-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/98-deska-uvitaci-majak-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-oddel-ozvenu",
+      "file": "reports/shots/galaxy-s9-android-cs/99-deska-oddel-ozvenu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-srovnej-hodiny",
+      "file": "reports/shots/galaxy-s9-android-cs/100-deska-srovnej-hodiny.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zamer-zdroj",
+      "file": "reports/shots/galaxy-s9-android-cs/101-deska-zamer-zdroj.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-priprav-pruzkumny-let",
+      "file": "reports/shots/galaxy-s9-android-cs/102-deska-priprav-pruzkumny-let.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-probud-spojovaci-antenu",
+      "file": "reports/shots/galaxy-s9-android-cs/103-deska-probud-spojovaci-antenu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-letovy-zaznamnik",
+      "file": "reports/shots/galaxy-s9-android-cs/104-deska-obnov-letovy-zaznamnik.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vysli-pruzkumnou-sondu",
+      "file": "reports/shots/galaxy-s9-android-cs/105-deska-vysli-pruzkumnou-sondu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vylad-pruletovy-stit",
+      "file": "reports/shots/galaxy-s9-android-cs/106-deska-vylad-pruletovy-stit.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-blizkou-kotvu",
+      "file": "reports/shots/galaxy-s9-android-cs/107-deska-obnov-blizkou-kotvu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-slad-vzdalene-majaky",
+      "file": "reports/shots/galaxy-s9-android-cs/108-deska-slad-vzdalene-majaky.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zajisti-zpatecni-majak",
+      "file": "reports/shots/galaxy-s9-android-cs/109-deska-zajisti-zpatecni-majak.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-stabilizuj-trhlinu-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/110-deska-stabilizuj-trhlinu-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zajisti-pristavaci-terasu",
+      "file": "reports/shots/galaxy-s9-android-cs/111-deska-zajisti-pristavaci-terasu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-ukotvi-zpatecni-signal",
+      "file": "reports/shots/galaxy-s9-android-cs/112-deska-ukotvi-zpatecni-signal.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-probud-svetelny-most",
+      "file": "reports/shots/galaxy-s9-android-cs/113-deska-probud-svetelny-most.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-probud-svetelny-most",
+      "file": "reports/shots/galaxy-s9-android-cs/114-dosly-tahy-probud-svetelny-most.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-vodni-kanaly",
+      "file": "reports/shots/galaxy-s9-android-cs/115-deska-obnov-vodni-kanaly.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-precti-semenny-archiv",
+      "file": "reports/shots/galaxy-s9-android-cs/116-deska-precti-semenny-archiv.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-probud-srdce-zahrady-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/117-deska-probud-srdce-zahrady-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-pripoj-semenny-archiv",
+      "file": "reports/shots/galaxy-s9-android-cs/118-deska-pripoj-semenny-archiv.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-priprav-komoru-pro-vzorek",
+      "file": "reports/shots/galaxy-s9-android-cs/119-deska-priprav-komoru-pro-vzorek.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-rozlusti-zivou-mapu",
+      "file": "reports/shots/galaxy-s9-android-cs/120-deska-rozlusti-zivou-mapu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vystopuj-lidsky-signal",
+      "file": "reports/shots/galaxy-s9-android-cs/121-deska-vystopuj-lidsky-signal.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-vystopuj-lidsky-signal",
+      "file": "reports/shots/galaxy-s9-android-cs/122-dosly-tahy-vystopuj-lidsky-signal.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vytyc-zachrannou-trasu-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/123-deska-vytyc-zachrannou-trasu-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-probud-signalni-rezonator",
+      "file": "reports/shots/galaxy-s9-android-cs/124-deska-probud-signalni-rezonator.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-nasmeruj-antenu",
+      "file": "reports/shots/galaxy-s9-android-cs/125-deska-nasmeruj-antenu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-prerusenou-zpravu",
+      "file": "reports/shots/galaxy-s9-android-cs/126-deska-obnov-prerusenou-zpravu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zajisti-sestupovy-koridor-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/127-deska-zajisti-sestupovy-koridor-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-rozsvit-pristavaci-znacky",
+      "file": "reports/shots/galaxy-s9-android-cs/128-deska-rozsvit-pristavaci-znacky.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-pruzkumnou-sondu",
+      "file": "reports/shots/galaxy-s9-android-cs/129-deska-obnov-pruzkumnou-sondu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zmapuj-korenovou-sit",
+      "file": "reports/shots/galaxy-s9-android-cs/130-deska-zmapuj-korenovou-sit.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-otevri-cestu-pres-potok",
+      "file": "reports/shots/galaxy-s9-android-cs/131-deska-otevri-cestu-pres-potok.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-slad-mytinu-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/132-deska-slad-mytinu-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-serid-terenni-vzorkovac",
+      "file": "reports/shots/galaxy-s9-android-cs/133-deska-serid-terenni-vzorkovac.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-napln-kanaly-porostu",
+      "file": "reports/shots/galaxy-s9-android-cs/134-deska-napln-kanaly-porostu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-rozlusti-odpoved-pylu",
+      "file": "reports/shots/galaxy-s9-android-cs/135-deska-rozlusti-odpoved-pylu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-propoj-rezonator-porostu",
+      "file": "reports/shots/galaxy-s9-android-cs/136-deska-propoj-rezonator-porostu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-odhal-korenovy-pruchod-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/137-deska-odhal-korenovy-pruchod-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-vetraci-pruduchy",
+      "file": "reports/shots/galaxy-s9-android-cs/138-deska-obnov-vetraci-pruduchy.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-zaznam-vypravy",
+      "file": "reports/shots/galaxy-s9-android-cs/139-deska-obnov-zaznam-vypravy.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-vyvaz-semennou-komoru",
+      "file": "reports/shots/galaxy-s9-android-cs/140-deska-vyvaz-semennou-komoru.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-nalad-kanal-spravce",
+      "file": "reports/shots/galaxy-s9-android-cs/141-deska-nalad-kanal-spravce.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-otevri-vstup-do-svatyne-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/142-deska-otevri-vstup-do-svatyne-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-udrzuj-zpatecni-majak-v-provozu",
+      "file": "reports/shots/galaxy-s9-android-cs/143-deska-udrzuj-zpatecni-majak-v-provozu.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-obnov-ukryt-navstevniku",
+      "file": "reports/shots/galaxy-s9-android-cs/144-deska-obnov-ukryt-navstevniku.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-slad-spolecny-jazyk",
+      "file": "reports/shots/galaxy-s9-android-cs/145-deska-slad-spolecny-jazyk.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-probud-pamet-spravce",
+      "file": "reports/shots/galaxy-s9-android-cs/146-deska-probud-pamet-spravce.png",
+      "issues": 0
+    },
+    {
+      "label": "dosly-tahy-probud-pamet-spravce",
+      "file": "reports/shots/galaxy-s9-android-cs/147-dosly-tahy-probud-pamet-spravce.png",
+      "issues": 0
+    },
+    {
+      "label": "deska-zajisti-souradnice-utociste-tezke",
+      "file": "reports/shots/galaxy-s9-android-cs/148-deska-zajisti-souradnice-utociste-tezke.png",
+      "issues": 0
+    },
+    {
+      "label": "nenalezen-level",
+      "file": "reports/shots/galaxy-s9-android-cs/149-nenalezen-level.png",
+      "issues": 0
+    },
+    {
+      "label": "konec",
+      "file": "reports/shots/galaxy-s9-android-cs/150-konec.png",
+      "issues": 0
+    }
+  ]
+}

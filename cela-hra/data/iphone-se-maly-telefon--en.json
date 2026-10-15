@@ -1,0 +1,118 @@
+{
+  "project": "iPhone SE (malý telefon)",
+  "language": "en",
+  "mode": "full",
+  "botId": "c4e66b9e-0311-4aaf-a086-1ff3c22d890c",
+  "analytics": true,
+  "viewport": {
+    "width": 320,
+    "height": 568
+  },
+  "startedAt": "2026-10-15T08:43:08.493Z",
+  "levels": [
+    {
+      "title": "A little more light",
+      "budget": 20,
+      "result": "výhra",
+      "movesUsed": 9,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 3,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 28502,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": []
+    },
+    {
+      "title": "A safe barrier",
+      "budget": 9,
+      "result": "výhra",
+      "movesUsed": 6,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "EMP"
+      ],
+      "boostersFired": 0,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 17625,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Inner hatch"
+      ]
+    },
+    {
+      "title": "Holding steady",
+      "budget": 10,
+      "result": "výhra",
+      "movesUsed": 7,
+      "adsWatched": 0,
+      "helpersUsed": [
+        "Beam",
+        "Laser"
+      ],
+      "boostersFired": 1,
+      "tutorials": 3,
+      "stalls": 0,
+      "durationMs": 27377,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Airlock seals"
+      ]
+    },
+    {
+      "title": "A spark of hope",
+      "budget": 14,
+      "result": "výhra",
+      "movesUsed": 5,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 1,
+      "tutorials": 1,
+      "stalls": 0,
+      "durationMs": 20786,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Emergency lights"
+      ]
+    },
+    {
+      "title": "A clearer view",
+      "budget": 16,
+      "result": "výhra",
+      "movesUsed": 12,
+      "adsWatched": 0,
+      "helpersUsed": [],
+      "boostersFired": 2,
+      "tutorials": 0,
+      "stalls": 0,
+      "durationMs": 32764,
+      "attempts": 1,
+      "energyAds": 0,
+      "failedAttempts": [],
+      "notes": [],
+      "route": [
+        "příběh",
+        "Window seals"
+      ]
+    }
+  ],
+  "loadMs": 701,
+  "bytes": 319496
+}
