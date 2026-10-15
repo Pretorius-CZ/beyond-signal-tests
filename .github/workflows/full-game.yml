@@ -32,7 +32,7 @@ concurrency:
 
 jobs:
   plan:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       devices: ${{ steps.m.outputs.devices }}
       langs: ${{ steps.m.outputs.langs }}
@@ -47,7 +47,7 @@ jobs:
 
   play:
     needs: plan
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 350        # GitHub povolí max. 6 hodin na úlohu
     strategy:
       fail-fast: false
@@ -89,7 +89,7 @@ jobs:
   report:
     needs: play
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
