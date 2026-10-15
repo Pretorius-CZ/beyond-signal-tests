@@ -31,28 +31,37 @@ for (const language of LANGS) {
     const entry = await enterGame(page, testInfo, diary, baseURL);
     Object.assign(run, entry);
 
-    for (let n = 0; n < LEVELS; n++) {
-      const route = [];
-      if (!(await openNextLevel(page, route))) {
-        // EXPECTED_LEVELS (e.g. 167): if the bot has won them all, this is the end of the game, not a stuck bot.
-        const wins = run.levels.filter(l => l.result === 'výhra').length;
-        const done = process.env.EXPECTED_LEVELS && !startState && wins >= Number(process.env.EXPECTED_LEVELS);
-        await checkpoint(page, testInfo, diary, done ? 'konec-hry' : 'nenalezen-level');
-        run.levels.push({ title: '—', result: done ? 'konec hry' : 'nenalezen další level', route });
-        break;
+    // Any unexpected error (browser crash, element that cannot be clicked…) is recorded with a
+    // screenshot and the results gathered so far are still saved – the run never vanishes silently.
+    try {
+      for (let n = 0; n < LEVELS; n++) {
+        const route = [];
+        if (!(await openNextLevel(page, route))) {
+          // EXPECTED_LEVELS (e.g. 167): if the bot has won them all, this is the end of the game, not a stuck bot.
+          const wins = run.levels.filter(l => l.result === 'výhra').length;
+          const done = process.env.EXPECTED_LEVELS && !startState && wins >= Number(process.env.EXPECTED_LEVELS);
+          await checkpoint(page, testInfo, diary, done ? 'konec-hry' : 'nenalezen-level');
+          run.levels.push({ title: '—', result: done ? 'konec hry' : 'nenalezen další level', route });
+          break;
+        }
+        const level = await playLevel(page, testInfo, diary, POLICY);
+        level.route = route;
+        run.levels.push(level);
+        saveRun(run, testInfo); // keep partial results of long runs
+        if (level.result !== 'výhra') break;
+        await collectWin(page);
+        // Save points: latest state + every 10 levels (lets you start a later run mid-game).
+        const stateBase = `reports/state/${slug(testInfo.project.name)}-${language}`;
+        await saveState(page, `${stateBase}-latest.json`);
+        if ((n + 1) % 10 === 0) await saveState(page, `${stateBase}-after-${n + 1}.json`);
       }
-      const level = await playLevel(page, testInfo, diary, POLICY);
-      level.route = route;
-      run.levels.push(level);
-      saveRun(run, testInfo); // keep partial results of long runs
-      if (level.result !== 'výhra') break;
-      await collectWin(page);
-      // Save points: latest state + every 10 levels (lets you start a later run mid-game).
-      const stateBase = `reports/state/${slug(testInfo.project.name)}-${language}`;
-      await saveState(page, `${stateBase}-latest.json`);
-      if ((n + 1) % 10 === 0) await saveState(page, `${stateBase}-after-${n + 1}.json`);
+    } catch (e) {
+      const message = String(e?.message || e).split('\n')[0].slice(0, 300);
+      run.levels.push({ title: run.levels.at(-1)?.result === 'výhra' ? '(další level)' : '—', result: 'chyba bota / prohlížeče', error: message });
+      diary.notes.push('přerušeno: ' + message);
+      await checkpoint(page, testInfo, diary, 'preruseno').catch(() => {});
     }
-    await checkpoint(page, testInfo, diary, 'konec');
+    await checkpoint(page, testInfo, diary, 'konec').catch(() => {});
 
     run.notes = diary.notes; run.console = diary.console; run.pageErrors = diary.pageErrors; run.failedRequests = [...new Set(diary.failedRequests)];
     run.issues = dedupe(diary.issues); run.screens = diary.screens.map(s => ({ label: s.label, file: path.relative(process.cwd(), s.file), issues: s.issues }));
@@ -62,7 +71,7 @@ for (const language of LANGS) {
     // Soft checks: the test is marked failed, but the whole run is still recorded.
     expect.soft(diary.pageErrors, 'JavaScript chyby na stránce').toEqual([]);
     expect.soft(run.issues.filter(i => i.severity === 'error'), 'vizuální / textové chyby').toEqual([]);
-    expect.soft(run.levels.filter(l => /chyba|zaseknuto|zavřel|nenalezen/.test(l.result)), 'místa, kde se bot nebo hra zasekli').toEqual([]);
+    expect.soft(run.levels.filter(l => /chyba|zaseknuto|zavřel|nenalezen|přerušeno/.test(l.result)), 'místa, kde se bot nebo hra zasekli').toEqual([]);
   });
 }
 
