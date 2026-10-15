@@ -1,0 +1,65 @@
+name: Herní boti – rychlá kontrola
+
+on:
+  workflow_dispatch:          # ruční spuštění tlačítkem "Run workflow"
+    inputs:
+      base_url:
+        description: 'Adresa hry (nech prázdné = živý web s UTM štítkem botů)'
+        default: ''
+      levels:
+        description: 'Kolik levelů bot zkusí projít'
+        default: '6'
+      langs:
+        description: 'Jazyky (en,cs)'
+        default: 'en,cs'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: game-tests-smoke
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      BASE_URL: ${{ inputs.base_url }}
+      LEVELS: ${{ inputs.levels || '6' }}
+      LANGS: ${{ inputs.langs || 'en,cs' }}
+      FULL_BROWSERS: '1'      # iPhony a iPady ve skutečném WebKitu (jádro Safari), plus Firefox
+      WORKERS: '4'
+      BOT_SEED: ${{ secrets.BOT_SEED }}   # nenastaveno = boti do statistik vůbec neposílají
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit firefox
+
+      - name: Boti hrají
+        id: bots
+        run: npx playwright test
+        continue-on-error: true   # report chceme, i když boti něco najdou
+
+      - name: Souhrn
+        if: always()
+        run: |
+          node scripts/summary.mjs > /dev/null
+          cat reports/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report-${{ github.run_number }}
+          path: reports
+          retention-days: 14
+
+      - name: Výsledek
+        if: steps.bots.outcome == 'failure'
+        run: |
+          echo "::warning::Boti našli problémy – viz souhrn a report."
+          exit 1
