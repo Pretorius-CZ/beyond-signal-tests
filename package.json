@@ -1,0 +1,13 @@
+{
+  "name": "beyond-signal-tests",
+  "version": "1.0.0",
+  "description": "Herní boti pro Beyond the Signal",
+  "scripts": {
+    "test": "playwright test",
+    "report": "node scripts/summary.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  },
+  "type": "module"
+}
