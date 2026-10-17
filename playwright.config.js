@@ -12,6 +12,8 @@ const as = (device, engine) => ({
 
 export default defineConfig({
   testDir: './tests',
+  // SUITE picks the check: playthrough (default), chaos, czech, perf, a11y, visual
+  testMatch: `${process.env.SUITE || 'playthrough'}.spec.js`,
   timeout: Number(process.env.TIMEOUT_MIN || (process.env.LEVELS === 'all' ? 330 : 15)) * 60 * 1000,
   fullyParallel: true,
   workers: process.env.WORKERS ? Number(process.env.WORKERS) : 4,

@@ -49,8 +49,9 @@ proto mají oddělené identity.
 
 ## Celá hra
 
-Workflow **Herní boti – celá hra** projde všech 167 levelů od začátku do konce: každé
-zařízení ve vlastní souběžné úloze, jednou týdně (neděle ráno) nebo ručně.
+Workflow **Herní boti – celá hra** projde všechny levely od začátku do konce (teď 187;
+počet si bot zjistí sám, při změně hry stačí upravit `EXPECTED_LEVELS` v workflow).
+Každé zařízení běží ve vlastní souběžné úloze. Spouští se jen ručně.
 
 - Prohraný level zkusí bot znovu (výchozí 3×). Když dojde energie, podívá se na
   simulovanou reklamu za +1 energii, jako hráč.
@@ -61,26 +62,47 @@ zařízení ve vlastní souběžné úloze, jednou týdně (neděle ráno) nebo 
 
 **Minuty GitHub Actions:** veřejný repozitář je má zdarma bez omezení. Soukromý má na
 bezplatném účtu 2 000 minut měsíčně. Celá hra na 3 zařízeních spotřebuje asi 600 minut,
-denní kontrola asi 25 minut. Při soukromém repozitáři proto pouštěj celou hru jen na
+rychlá kontrola asi 25 minut. Při soukromém repozitáři proto pouštěj celou hru jen na
 1–2 zařízeních, nebo jednou za 14 dní.
+
+## Další kontroly (samostatné workflow)
+
+Všechny se pouštějí ručně (*Actions → název → Run workflow*), kromě změn vzhledu.
+Výsledek je v záložce *Summary* běhu a podrobně v příloze (*Artifacts*).
+
+| Workflow | Co dělá | Trvá |
+|---|---|---|
+| **Kontrola – balanc levelů** | Simuluje každý level stovkykrát se zkušeným a s běžným hráčem (přímo kódem hry, bez prohlížeče). Ukáže, kolik % hráčů level vyhraje s danými tahy, a navrhne počet tahů pro cílovou úspěšnost (výchozí 75 %). Graf obtížnosti + tabulka. | 20–40 min |
+| **Kontrola – opičák (netrpělivý hráč)** | Rychlé ťukání během animací, dvojklik, tahy prstem, otočení telefonu, odchod do jiné aplikace, Escape/Zpět, pomůcky, obnovení stránky. Po každém kontroluje, že deska a tahy dávají smysl. | 5–15 min |
+| **Kontrola – čeština** | Najde texty bez českého překladu ve zdrojovém kódu hry a pak projde hru v češtině a hledá zbylou angličtinu a useknutý text. | 5–10 min |
+| **Kontrola – výkon a paměť** | Rychlost načtení (normálně i slabý telefon s 3G), plynulost, zaseknutí a jestli paměť roste s počtem levelů (únik). Jen Chromium. | 10–20 min |
+| **Kontrola – přístupnost** | Automatická kontrola WCAG 2.2 (axe) hlavních obrazovek + ovládání klávesnicí. | 5–10 min |
+| **Kontrola – změny vzhledu** | Každý den v 7:41 vyfotí stejné obrazovky a porovná je s minulým během. Změny ukáže vedle sebe (minule / teď / rozdíl). Dílky na desce a odpočet energie jsou při focení skryté. | 5–10 min |
+
+Lokálně se vybírá sada proměnnou `SUITE` (`playthrough`, `chaos`, `czech`, `perf`, `a11y`, `visual`):
+
+```bash
+SUITE=chaos npx playwright test --project="Pixel 7 (Android)"
+node scripts/suite-summary.mjs chaos
+GAME_DIR=../TG_game SAMPLES=200 node scripts/balance.mjs && node scripts/balance-report.mjs
+```
+
+Balanc je odhad: simulovaný „běžný hráč“ je slabší než člověk a nepoužívá reklamy ani pomůcky.
+Ber ho hlavně jako pořadí (které levely jsou nejtěžší / skoky v obtížnosti) a porovnej s reálnými daty v balance.html.
 
 ## Spuštění v GitHub Actions
 
 1. Vytvoř **nový** repozitář, např. `beyond-signal-tests`, a nahraj do něj obsah téhle složky.
    Do repozitáře hry ho nedávej, ten už GitHub Pages používá pro samotnou hru.
 2. (Volitelně) přidej secret `BOT_SEED`, viz výše.
-3. *Actions → Herní boti – denní kontrola → Run workflow*.
-4. Po prvním běhu vznikne větev `gh-pages`. Nastav *Settings → Pages → Source:
-   Deploy from a branch → `gh-pages` / root*. GitHub Pages u soukromého repozitáře
-   vyžaduje placený účet (Pro). U bezplatného účtu buď repozitář zveřejni, nebo si report
-   stahuj jako přílohu běhu (*Artifacts*).
+3. *Settings → Pages → Source: GitHub Actions*.
+4. *Actions → Herní boti – celá hra (nebo rychlá kontrola) → Run workflow*.
 5. Kde co najdeš:
    - **souhrnná tabulka** je přímo na stránce běhu v záložce *Summary*,
-   - **report se screenshoty**: `https://<účet>.github.io/beyond-signal-tests/denni/`
-     a `…/cela-hra/`,
-   - **podrobný Playwright report** (video, trace krok po kroku) denní kontroly: `…/denni/playwright/`.
-6. Denní kontrola běží každé ráno, celá hra každou neděli. Když boti něco najdou,
-   běh je červený a GitHub ti pošle e-mail.
+   - **report se screenshoty celé hry**: `https://<účet>.github.io/beyond-signal-tests/`,
+   - ostatní kontroly mají report v příloze běhu (*Artifacts*, rozbalit a otevřít `index.html`).
+6. Automaticky (každý den) běží jen **změny vzhledu**, vše ostatní se pouští ručně.
+   Když boti něco najdou, běh je červený nebo žlutý a GitHub ti pošle e-mail.
 
 ## Spuštění u sebe
 
@@ -108,14 +130,30 @@ Na Windows se proměnné nastavují jinak, např. v PowerShellu: `$env:LEVELS=10
 | `USE_HELPERS` | 1 | `0` = bez pomůcek, „čistá“ hratelnost |
 | `WORKERS` | 4 | kolik prohlížečů hraje naráz |
 | `VIDEO` | 0 | `1` = nahrávat video všech běhů |
+| `AD_MAX_WAIT` | 120 | jak dlouho (s) bot nejvýš čeká, než reklama půjde zavřít |
+
+## Reklamy
+
+Bot zvládá okamžitou testovací reklamu, reklamu s odpočtem (čeká, než se odemkne nebo
+objeví tlačítko „Zavřít“, „Získat odměnu“, „×“…) i skutečnou reklamní síť v testovacím režimu.
+Nikdy nemačká „zrušit bez odměny“. Doba čekání se zapisuje do výsledků (`adSeconds`).
+
+Pro jistotu může hra označit prvky reklamy atributy, pak je bot najde vždy:
+`data-bot="ad"` na okně reklamy, `data-bot="ad-start"` na tlačítku spuštění a
+`data-bot="ad-close"` na tlačítku zavření / převzetí odměny.
+
+Boti nesmí sledovat ani proklikávat **ostré** reklamy (reklamní síť by to vyhodnotila
+jako podvod). V testovacím provozu (UTM `automated_test`) má hra načítat reklamy
+v testovacím režimu sítě.
 
 ## Struktura
 
 - `lib/page-probe.js`: čtení desky z HTML, výběr tahu, kontroly obrazovky
 - `lib/player.js`: ovládání hry (navigace, tahy, pomůcky, reklama)
 - `tests/playthrough.spec.js`: scénář průchodu
+- `tests/chaos|czech|perf|a11y|visual.spec.js`, `scripts/balance*.mjs`, `scripts/czech-static.mjs`, `scripts/visual-compare.mjs`, `scripts/suite-summary.mjs`: další kontroly
 - `scripts/summary.mjs`: souhrn a HTML přehled
-- `.github/workflows/game-tests.yml`: denní kontrola
+- `.github/workflows/game-tests.yml`: rychlá kontrola
 - `.github/workflows/full-game.yml`: celá hra
 - `site/index.html`: rozcestník reportů
 
