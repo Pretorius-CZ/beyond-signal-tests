@@ -1,0 +1,67 @@
+name: Kontrola – opičák (netrpělivý hráč)
+
+# Rychlé ťukání, tahy prstem, otočení telefonu, přepnutí aplikace, Escape/Zpět, obnovení stránky.
+# Spouští se jen ručně: Actions → "Kontrola – opičák (netrpělivý hráč)" → Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: 'Zařízení (názvy z playwright.config.js, oddělené čárkou)'
+        default: 'iPhone SE (malý telefon),Pixel 7 (Android),iPad Mini,Desktop 1920×1080'
+      langs:
+        description: 'Jazyky (en,cs)'
+        default: 'en'
+      base_url:
+        description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      SUITE: chaos
+      BASE_URL: ${{ inputs.base_url }}
+      FULL_BROWSERS: '1'
+      WORKERS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Kontrola
+        id: check
+        continue-on-error: true
+        env:
+          DEVICES: ${{ inputs.devices }}
+          LANG_LIST: ${{ inputs.langs }}
+        run: |
+          IFS=',' read -ra D <<< "$DEVICES"; args=(); for d in "${D[@]}"; do args+=(--project "$(echo "$d" | xargs)"); done
+          IFS=',' read -ra L <<< "$LANG_LIST"; status=0
+          for lang in "${L[@]}"; do LANGS="$(echo "$lang" | xargs)" npx playwright test "${args[@]}" || status=1; done
+          exit $status
+      - name: Souhrn
+        if: always()
+        run: |
+          node scripts/suite-summary.mjs chaos > /dev/null
+          cat reports/chaos/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chaos-${{ github.run_number }}
+          path: |
+            reports/chaos
+            reports/shots
+          retention-days: 30
+      - name: Výsledek
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "::warning::Kontrola něco našla – viz souhrn."
+          exit 1

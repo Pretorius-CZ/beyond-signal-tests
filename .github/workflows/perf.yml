@@ -1,0 +1,67 @@
+name: Kontrola – výkon a paměť
+
+# Rychlost načtení (i na slabém telefonu a pomalém internetu), plynulost, zaseknutí a únik paměti. Jen Chromium.
+# Spouští se jen ručně: Actions → "Kontrola – výkon a paměť" → Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: 'Zařízení (názvy z playwright.config.js, oddělené čárkou)'
+        default: 'Pixel 7 (Android),Galaxy S9+ (Android),Notebook 1366×768'
+      langs:
+        description: 'Jazyky (en,cs)'
+        default: 'en'
+      base_url:
+        description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      SUITE: perf
+      BASE_URL: ${{ inputs.base_url }}
+      FULL_BROWSERS: '1'
+      WORKERS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Kontrola
+        id: check
+        continue-on-error: true
+        env:
+          DEVICES: ${{ inputs.devices }}
+          LANG_LIST: ${{ inputs.langs }}
+        run: |
+          IFS=',' read -ra D <<< "$DEVICES"; args=(); for d in "${D[@]}"; do args+=(--project "$(echo "$d" | xargs)"); done
+          IFS=',' read -ra L <<< "$LANG_LIST"; status=0
+          for lang in "${L[@]}"; do LANGS="$(echo "$lang" | xargs)" npx playwright test "${args[@]}" || status=1; done
+          exit $status
+      - name: Souhrn
+        if: always()
+        run: |
+          node scripts/suite-summary.mjs perf > /dev/null
+          cat reports/perf/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: perf-${{ github.run_number }}
+          path: |
+            reports/perf
+            reports/shots
+          retention-days: 30
+      - name: Výsledek
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "::warning::Kontrola něco našla – viz souhrn."
+          exit 1

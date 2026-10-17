@@ -1,0 +1,76 @@
+name: Kontrola – čeština
+
+# 1) Ve zdrojovém kódu hry najde texty, které nemají český překlad (bez prohlížeče, pár sekund).
+# 2) Zahraje první levely v češtině, projde menu a hledá zbylou angličtinu a useknutý text.
+# Spouští se jen ručně: Actions → "Kontrola – čeština" → Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: 'Zařízení (názvy z playwright.config.js, oddělené čárkou)'
+        default: 'iPhone SE (malý telefon),Galaxy S9+ (Android),Desktop 1920×1080'
+      levels:
+        description: 'Kolik levelů zahrát v češtině'
+        default: '8'
+      branch:
+        description: 'Větev hry v repozitáři TG_game (pro kontrolu zdrojového kódu)'
+        default: 'codex/cockpit-stage'
+      base_url:
+        description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      SUITE: czech
+      BASE_URL: ${{ inputs.base_url }}
+      LEVELS: ${{ inputs.levels }}
+      FULL_BROWSERS: '1'
+      WORKERS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Pretorius-CZ/TG_game
+          ref: ${{ inputs.branch }}
+          path: game
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Překlady ve zdrojovém kódu
+        run: GAME_DIR=game node scripts/czech-static.mjs
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Čeština ve hře
+        id: check
+        continue-on-error: true
+        env:
+          DEVICES: ${{ inputs.devices }}
+        run: |
+          IFS=',' read -ra D <<< "$DEVICES"; args=(); for d in "${D[@]}"; do args+=(--project "$(echo "$d" | xargs)"); done
+          npx playwright test "${args[@]}"
+      - name: Souhrn
+        if: always()
+        run: |
+          node scripts/suite-summary.mjs czech > /dev/null
+          cat reports/czech/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cestina-${{ github.run_number }}
+          path: |
+            reports/czech
+            reports/shots
+          retention-days: 30
+      - name: Výsledek
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "::warning::Kontrola něco našla – viz souhrn."
+          exit 1

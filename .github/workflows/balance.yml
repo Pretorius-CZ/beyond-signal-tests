@@ -1,0 +1,54 @@
+name: Kontrola – balanc levelů
+
+# Zahraje každý level stovkykrát bez prohlížeče, podle pravidel přímo ze zdrojového kódu hry.
+# Ukáže křivku obtížnosti a navrhne limit tahů pro každý level.
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Větev hry v repozitáři TG_game'
+        default: 'codex/cockpit-stage'
+      samples:
+        description: 'Kolik her na level a typ hráče (víc = přesnější, pomalejší)'
+        default: '200'
+      target:
+        description: 'Kolik procent běžných hráčů má level vyhrát (0.75 = 75 %)'
+        default: '0.75'
+      only:
+        description: 'Jen vybrané levely (čísla oddělená čárkou), prázdné = všechny'
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  balance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Pretorius-CZ/TG_game
+          ref: ${{ inputs.branch }}
+          path: game
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Simulace
+        env:
+          GAME_DIR: game
+          SAMPLES: ${{ inputs.samples }}
+          TARGET: ${{ inputs.target }}
+          ONLY: ${{ inputs.only }}
+        run: node scripts/balance.mjs
+      - name: Report
+        run: |
+          node scripts/balance-report.mjs > /dev/null
+          cat reports/balance/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: balanc-${{ github.run_number }}
+          path: reports/balance
+          retention-days: 90

@@ -1,0 +1,73 @@
+name: Kontrola – změny vzhledu
+
+# Každý den vyfotí stejné obrazovky na několika zařízeních a porovná je s minulým během.
+# V souhrnu uvidíš, co se změnilo (minule / teď / rozdíl červeně).
+
+on:
+  schedule:
+    - cron: '41 5 * * *'      # každý den cca v 7:41 českého času
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: 'Zařízení (názvy z playwright.config.js, oddělené čárkou)'
+        default: 'iPhone SE (malý telefon),Pixel 7 (Android),iPad Mini,Notebook 1366×768,Desktop 1920×1080'
+      base_url:
+        description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
+        default: ''
+
+permissions:
+  contents: read
+  actions: read               # stažení snímků z minulého běhu
+
+concurrency:
+  group: visual
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      SUITE: visual
+      BASE_URL: ${{ inputs.base_url }}
+      FULL_BROWSERS: '1'
+      WORKERS: '2'
+      DEVICES: ${{ inputs.devices || 'iPhone SE (malý telefon),Pixel 7 (Android),iPad Mini,Notebook 1366×768,Desktop 1920×1080' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Snímky
+        continue-on-error: true
+        run: |
+          IFS=',' read -ra D <<< "$DEVICES"; args=(); for d in "${D[@]}"; do args+=(--project "$(echo "$d" | xargs)"); done
+          npx playwright test "${args[@]}"
+      - name: Snímky z minulého běhu
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          id=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow visual.yml --status success --limit 1 --json databaseId -q '.[0].databaseId')
+          if [ -n "$id" ]; then gh run download "$id" --repo "$GITHUB_REPOSITORY" -n vzhled-snimky -D reports/visual/previous || echo "minulé snímky nenalezeny"; else echo "první běh"; fi
+      - name: Porovnání
+        run: |
+          node scripts/visual-compare.mjs > /dev/null
+          cat reports/visual/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vzhled-snimky
+          path: reports/visual/current
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vzhled-report-${{ github.run_number }}
+          path: |
+            reports/visual/index.html
+            reports/visual/summary.md
+            reports/visual/previous
+            reports/visual/current
+            reports/visual/diff
+          retention-days: 30
