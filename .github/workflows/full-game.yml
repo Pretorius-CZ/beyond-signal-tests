@@ -18,9 +18,7 @@ on:
       base_url:
         description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
         default: ''
-  schedule:
-    - cron: '7 21 * * *'      # každý den ve 23:07 českého času (letní čas), hotovo do rána
-
+ 
 permissions:
   contents: read
   pages: write
