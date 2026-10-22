@@ -1,0 +1,103 @@
+name: Kontrola – slepý playtest (bot)
+
+# Bot projde stránku slepého playtestu (playtest.html) stejně jako člověk: odehraje každý ze 200 testů
+# co nejrychleji a ohodnotí ho podle zbylých tahů:
+#   došly tahy nebo zbyly nejvýš 2 = Těžké · 3–6 = Akorát · 7 a víc = Lehké.
+# Hodnocení se zapíše do databáze (sekce Slepý playtest v /balance) s poznámkou začínající „BOT“.
+# Každé zařízení je samostatný průchod s vlastním náhodným pořadím a běží souběžně (1,5–4 hodiny).
+
+on:
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: 'Zařízení = počet průchodů (názvy z playwright.config.js, oddělené čárkou)'
+        default: 'Pixel 7 (Android),Galaxy S9+ (Android),iPhone SE (malý telefon),Desktop 1920×1080'
+      levels:
+        description: 'Kolik testů projít (all = všech 200, např. 10 = zkouška)'
+        default: 'all'
+      send:
+        description: 'Zapsat hodnocení do databáze?'
+        type: choice
+        options: ['ano', 'ne']
+        default: 'ano'
+      base_url:
+        description: 'Adresa hry (prázdné = proměnná GAME_URL, jinak game.playbeyondthesignal.com)'
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      devices: ${{ steps.m.outputs.devices }}
+    steps:
+      - id: m
+        env:
+          DEVICES: ${{ inputs.devices }}
+        run: echo "devices=$(node -e 'console.log(JSON.stringify(process.env.DEVICES.split(",").map(s=>s.trim()).filter(Boolean)))')" >> "$GITHUB_OUTPUT"
+
+  play:
+    name: Průchod
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350        # GitHub povolí max. 6 hodin na úlohu
+    strategy:
+      fail-fast: false
+      matrix:
+        device: ${{ fromJSON(needs.plan.outputs.devices) }}
+    env:
+      SUITE: playtest
+      BASE_URL: ${{ inputs.base_url || vars.GAME_URL }}
+      LEVELS: ${{ inputs.levels }}
+      PLAYTEST_SEND: ${{ inputs.send == 'ano' && '1' || '0' }}
+      PLAYTEST_RUN: bot-${{ github.run_number }}
+      FULL_BROWSERS: '1'
+      WORKERS: '1'
+      TIMEOUT_MIN: '340'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Bot hraje slepý playtest
+        continue-on-error: true
+        run: npx playwright test --project "${{ matrix.device }}"
+      - id: slug
+        run: echo "slug=$(echo '${{ matrix.device }}' | iconv -t ascii//TRANSLIT | tr -cs 'A-Za-z0-9' '-')" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playtest-${{ steps.slug.outputs.slug }}
+          path: reports/playtest
+          retention-days: 7
+
+  summary:
+    name: Souhrn
+    needs: [play]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: playtest-*
+          path: parts
+      - name: Souhrn
+        run: |
+          mkdir -p reports/playtest
+          for d in parts/playtest-*/; do cp "$d"* reports/playtest/ 2>/dev/null || true; done
+          node scripts/suite-summary.mjs playtest > /dev/null
+          cat reports/playtest/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: playtest-report-${{ github.run_number }}
+          path: reports/playtest
+          retention-days: 90
