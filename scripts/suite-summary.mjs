@@ -26,7 +26,7 @@ if (suite === 'chaos') {
   md = st ? `**Ve zdrojovém kódu:** zkontrolováno ${st.checked} textů, bez českého překladu **${st.missing.length}**.\n` : '';
   if (st?.missing.length) md += `\n| Text | Kde |\n|---|---|\n${st.missing.slice(0, 60).map(m => `| ${esc(m.text.slice(0, 100))} | ${esc(m.sources.join(', '))} |`).join('\n')}\n`;
   for (const d of dyn) {
-    md += `\n### Ve hře · ${d.device}\n\n- zbylá angličtina: **${d.english.length}**\n- useknutý nebo přetékající text: **${d.clipped.length}**\n`;
+    md += `\n### Ve hře · ${d.device}\n\n${d.played != null ? `- odehráno levelů: **${d.played}** (vyhráno ${d.won})${d.end ? ` · ${esc(d.end)}` : ''}${d.last ? ` · poslední: ${esc(d.last)}` : ''}\n` : ''}- zbylá angličtina: **${d.english.length}**\n- useknutý nebo přetékající text: **${d.clipped.length}**\n`;
     if (d.english.length) md += d.english.slice(0, 30).map(e => `  - „${esc(e.text)}“ (${e.screen})`).join('\n') + '\n';
     if (d.clipped.length) md += d.clipped.slice(0, 20).map(c => `  - ${c.kind}: ${esc(c.el)} ${esc(c.detail)} (${c.screen})`).join('\n') + '\n';
   }
@@ -36,6 +36,30 @@ if (suite === 'chaos') {
   const load = all.filter(j => 'playVisibleMs' in j), play = all.filter(j => j.fps);
   if (load.length) md += `### Načtení\n\n| Zařízení | Podmínky | Tlačítko HRÁT za | Hlavní obsah (LCP) | Staženo | Největší soubory |\n|---|---|---|---|---|---|\n${load.map(l => `| ${l.device} | ${l.label} | ${(l.playVisibleMs / 1000).toFixed(1)} s | ${(l.lcpMs / 1000).toFixed(1)} s | ${l.mb} MB (${l.requests} souborů) | ${l.biggest.slice(0, 3).map(b => `${b.url} ${b.kb} kB`).join(', ')} |`).join('\n')}\n`;
   if (play.length) md += `\n### Hraní\n\n| Zařízení | Podmínky | Levelů | FPS medián / nejhorších 10 % | Zaseknutí > 50 ms (> 200 ms) | Nejdelší | Paměť start → konec | Trend paměti | Prvky stránky |\n|---|---|---|---|---|---|---|---|---|\n${play.map(p => `| ${p.device} | ${p.label} | ${p.levels} | ${p.fps.median} / ${p.fps.worst10} | ${p.longTasks.count} (${p.longTasks.over200ms}) | ${p.longTasks.max} ms | ${p.memory.startMB} → ${p.memory.endMB} MB | ${p.memory.slopeMBperLevel > 1 ? '❌' : '✅'} ${p.memory.slopeMBperLevel} MB/level | ${p.memory.nodesStart} → ${p.memory.nodesEnd} |`).join('\n')}\n\nFPS na serveru bez grafické karty je jen orientační: porovnávej mezi běhy, ne s telefonem. Trend paměti nad 1 MB na level ukazuje na únik paměti.\n`;
+} else if (suite === 'playtest') {
+  title = 'Slepý playtest – bot';
+  const rows = fs.readdirSync(DIR).filter(f => f.endsWith('.jsonl')).flatMap(f => fs.readFileSync(path.join(DIR, f), 'utf8').trim().split('\n').filter(Boolean).map(l => JSON.parse(l)));
+  const runs = jsons().filter(j => j.run);
+  const devices = [...new Set(rows.map(r => r.device))];
+  const L = { easy: 'Lehké', fair: 'Akorát', hard: 'Těžké' }, icon = { easy: '🟢', fair: '🟡', hard: '🔴' };
+  const count = list => ({ easy: list.filter(r => r.rating === 'easy').length, fair: list.filter(r => r.rating === 'fair').length, hard: list.filter(r => r.rating === 'hard').length });
+  const all = count(rows), n = rows.length || 1;
+  md += `Bot hodnotí podle zbylých tahů: došly nebo zbyly nejvýš 2 = **Těžké**, 3–6 = **Akorát**, 7 a víc = **Lehké**. Pomůcky má jako v testu (jednu od každé, použije je v posledních 3 tazích).\n\n`;
+  md += `| Zařízení | Ohodnoceno | Lehké | Akorát | Těžké | Odesláno do databáze |\n|---|---|---|---|---|---|\n${devices.map(d => { const r = rows.filter(x => x.device === d), c = count(r), run = runs.find(x => x.device === d); return `| ${d} | ${r.length} | ${c.easy} | ${c.fair} | ${c.hard} | ${run ? (run.sent ? (run.pending ? `⚠️ čeká ${run.pending}` : '✅') : 'ne (zkušební běh)') : '–'} |`; }).join('\n')}\n| **Celkem** | ${rows.length} | ${all.easy} (${Math.round(100 * all.easy / n)} %) | ${all.fair} (${Math.round(100 * all.fair / n)} %) | ${all.hard} (${Math.round(100 * all.hard / n)} %) | |\n`;
+  // per level: all bot ratings, sorted from the hardest
+  const byLevel = {};
+  for (const r of rows) (byLevel[r.id] ??= { number: r.number, name: r.name, budget: r.budget, list: [] }).list.push(r);
+  const levels = Object.values(byLevel).map(l => { const c = count(l.list); const won = l.list.filter(r => r.outcome === 'won'); return { ...l, c, score: (c.hard * 2 + c.fair) / l.list.length, left: won.length ? +(won.reduce((a, r) => a + r.remaining, 0) / won.length).toFixed(1) : null, lost: l.list.length - won.length }; });
+  levels.sort((a, b) => b.score - a.score || (a.left ?? -1) - (b.left ?? -1));
+  const line = l => `| ${l.number ?? '–'} | ${esc(l.name)} | ${l.budget} | ${l.list.map(r => icon[r.rating]).join(' ')} | ${l.left ?? '–'} | ${l.lost || ''} |`;
+  const head = `| # | Level | Limit | Hodnocení botů | Zbylo tahů (průměr výher) | Nedohráno |\n|---|---|---|---|---|---|\n`;
+  md += `\n### Nejtěžší levely podle botů\n\n${head}${levels.slice(0, 25).map(line).join('\n')}\n`;
+  md += `\n### Nejlehčí levely podle botů\n\n${head}${levels.slice(-15).reverse().map(line).join('\n')}\n`;
+  md += `\n🟢 Lehké · 🟡 Akorát · 🔴 Těžké. Celá tabulka všech levelů je v příloze (playtest.csv). V /balance mají hodnocení botů poznámku začínající „BOT“; průchody botů: ${runs.map(r => `\`${r.session}\` (${r.device})`).join(', ') || '–'}.\n`;
+  const problems = runs.flatMap(r => [...(r.notes || []), ...(r.jsErrors || []).map(e => 'chyba JS: ' + e)].map(t => `${r.device}: ${t}`));
+  if (problems.length) md += `\n### Problémy\n\n${problems.slice(0, 30).map(p => `- ${esc(p)}`).join('\n')}\n`;
+  const csv = ['level;name;budget;ratings;easy;fair;hard;avg_moves_left_when_won;not_finished'].concat(levels.sort((a, b) => (a.number ?? 999) - (b.number ?? 999)).map(l => [l.number, `"${l.name}"`, l.budget, l.list.map(r => L[r.rating]).join(' / '), l.c.easy, l.c.fair, l.c.hard, l.left ?? '', l.lost].join(';')));
+  fs.writeFileSync(path.join(DIR, 'playtest.csv'), csv.join('\n'));
 } else if (suite === 'a11y') {
   title = 'Přístupnost';
   const { RULES_CS } = await import('../lib/a11y-rules.js');

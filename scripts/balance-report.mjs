@@ -20,6 +20,20 @@ const rows = list => list.slice(0, 20).map(r => `| ${r.number} | ${esc(r.name)} 
 const head = `| # | Level | Limit | Běžný hráč vyhraje | Zkušený vyhraje | Doporučený limit | Změna |\n|---|---|---|---|---|---|---|\n`;
 if (tooHard.length) md += `\n### Nejtěžší vůči cíli\n\n${head}${rows(tooHard)}\n`;
 if (tooEasy.length) md += `\n### Nejsnazší vůči cíli\n\n${head}${rows(tooEasy)}\n`;
+if (L[0]?.casual.rating) {
+  const verdict = r => { const g = r.casual.rating; return g.hard >= g.fair && g.hard >= g.easy ? 'hard' : g.fair >= g.easy ? 'fair' : 'easy'; };
+  const c = { easy: 0, fair: 0, hard: 0 }; L.forEach(r => c[verdict(r)]++);
+  md += `\n### Hodnocení jako ve slepém playtestu\n\nStejné pravidlo jako bot v playtestu (došly tahy nebo zbyly nejvýš 2 = Těžké, 3–6 = Akorát, 7+ = Lehké), ale ze stovek her běžného hráče na každý level a bez pomůcek. Level dostane hodnocení, které padlo nejčastěji.\n\n| Počet levelů | Lehké | Akorát | Těžké |\n|---|---|---|---|\n| běžný hráč | ${c.easy} | ${c.fair} | ${c.hard} |\n`;
+}
+if (data.compare) {
+  const cmp = L.filter(r => r.noChargeSwap).map(r => ({ ...r, dc: pct(r.casual.win) - pct(r.noChargeSwap.casual), ds: pct(r.skilled.win) - pct(r.noChargeSwap.skilled) }));
+  const avg = k => (cmp.reduce((n, r) => n + r[k], 0) / (cmp.length || 1)).toFixed(1);
+  const big = cmp.filter(r => r.dc >= 10).sort((a, b) => b.dc - a.dc);
+  md += `\n### Dopad přesouvání nábojů\n\nStejné hry (stejné desky) zahrané s možností přesunout náboj a bez ní. Kladné číslo = s přesunem se vyhrává častěji, level je snazší.\n\n`;
+  md += `| | Běžný hráč | Zkušený hráč |\n|---|---|---|\n| Průměrná změna úspěšnosti | ${avg('dc') > 0 ? '+' : ''}${avg('dc')} p. b. | ${avg('ds') > 0 ? '+' : ''}${avg('ds')} p. b. |\n| Levely snazší o 10 p. b. a víc | ${big.length} | ${cmp.filter(r => r.ds >= 10).length} |\n`;
+  if (big.length) md += `\n| # | Level | Limit | Běžný hráč bez přesunu | s přesunem | Změna |\n|---|---|---|---|---|---|\n${big.slice(0, 15).map(r => `| ${r.number} | ${esc(r.name)} | ${r.budget} | ${pct(r.noChargeSwap.casual)} % | ${pct(r.casual.win)} % | +${r.dc} |`).join('\n')}\n`;
+  md += `\nSimulovaný hráč náboj přesune, když mu to hned zlepší místo výbuchu, nebo ho krok po kroku vede k nejlepšímu místu na desce. Kaskády ale dopředu neplánuje, takže zkušený člověk může z pravidla vytěžit o něco víc.\n`;
+}
 md += `\nCelá tabulka všech levelů je v reportu (index.html) a v balance.csv.\n`;
 fs.writeFileSync(path.join(DIR, 'summary.md'), md);
 
@@ -79,18 +93,20 @@ ${hardMarks.map(r => `<circle cx="${x(r.number)}" cy="${y(r.casual.win)}" r="4" 
 <p class="muted" style="margin:4px 0 10px">„Tahy potřeba“ = kolik tahů potřebuje polovina / tři čtvrtiny / 90 % běžných hráčů. Doporučený limit = tahy, se kterými vyhraje ${target} % běžných hráčů. Kliknutím na záhlaví seřadíš.</p>
 <input id="filter" placeholder="Hledat level nebo kapitolu…" aria-label="Hledat level">
 <div class="scroll" style="margin-top:10px;max-height:70vh"><table id="t"><thead><tr>
-<th data-k="number">#</th><th data-k="name">Level</th><th data-k="group">Kapitola</th><th data-k="budget">Limit</th><th data-k="sw">Zkušený vyhraje</th><th data-k="cw">Běžný vyhraje</th><th data-k="p50">Tahy potřeba (50 / 75 / 90 %)</th><th data-k="suggested">Doporučený limit</th><th data-k="delta">Změna</th>
+<th data-k="number">#</th><th data-k="name">Level</th><th data-k="group">Kapitola</th><th data-k="budget">Limit</th><th data-k="sw">Zkušený vyhraje</th><th data-k="cw">Běžný vyhraje</th><th data-k="p50">Tahy potřeba (50 / 75 / 90 %)</th><th data-k="suggested">Doporučený limit</th><th data-k="delta">Změna</th>${L[0]?.casual.rating ? '<th data-k="rh">Hodnocení běžného hráče (L / A / T)</th>' : ''}${data.compare ? '<th data-k="cwOld">Běžný bez přesunu nábojů</th><th data-k="dc">Dopad přesunu</th>' : ''}
 </tr></thead><tbody></tbody></table></div>
 </section>
+${data.compare ? '<p class="muted">„Dopad přesunu“ = o kolik procentních bodů častěji vyhraje běžný hráč, když smí přesouvat náboje (stejné desky s pravidlem a bez něj).</p>' : ''}
 <p class="muted">Simulace hraje podle pravidel přímo ze zdrojového kódu hry, ale bez reklam a pomůcek. Skuteční hráči je mají, takže reálná úspěšnost bude o něco vyšší. Výsledky porovnej s daty hráčů v balance.html.</p>
 </main>
 <script>
-const L=${JSON.stringify(L.map(r => ({ number: r.number, name: r.name, group: r.group, budget: r.budget, sw: Math.round(r.skilled.win * 100), cw: Math.round(r.casual.win * 100), p50: r.casual.p50, p75: r.casual.p75, p90: r.casual.p90, suggested: r.suggested, delta: r.delta })))};
+const L=${JSON.stringify(L.map(r => ({ number: r.number, name: r.name, group: r.group, budget: r.budget, sw: Math.round(r.skilled.win * 100), cw: Math.round(r.casual.win * 100), p50: r.casual.p50, p75: r.casual.p75, p90: r.casual.p90, suggested: r.suggested, delta: r.delta, re: r.casual.rating ? Math.round(r.casual.rating.easy * 100) : null, rf: r.casual.rating ? Math.round(r.casual.rating.fair * 100) : null, rh: r.casual.rating ? Math.round(r.casual.rating.hard * 100) : null, cwOld: r.noChargeSwap ? Math.round(r.noChargeSwap.casual * 100) : null, dc: r.noChargeSwap ? Math.round(r.casual.win * 100) - Math.round(r.noChargeSwap.casual * 100) : null })))};
+const CMP=${data.compare ? 'true' : 'false'},RAT=${L[0]?.casual.rating ? 'true' : 'false'};
 const fmt=v=>v==null||v===null||!isFinite(v)?'–':v;
 let key='number',dir=1;
 function render(){const f=document.getElementById('filter').value.toLowerCase();
  const rows=L.filter(r=>!f||(r.name+' '+r.group+' '+r.number).toLowerCase().includes(f)).sort((a,b)=>((a[key]??999)>(b[key]??999)?1:(a[key]??999)<(b[key]??999)?-1:0)*dir);
- document.querySelector('#t tbody').innerHTML=rows.map(r=>'<tr><td class="n">'+r.number+'</td><td>'+r.name.replace(/</g,'&lt;')+'</td><td class="muted">'+r.group.replace(/</g,'&lt;')+'</td><td class="n">'+r.budget+'</td><td class="n">'+r.sw+' %</td><td class="n">'+r.cw+' %</td><td class="n">'+fmt(r.p50)+' / '+fmt(r.p75)+' / '+fmt(r.p90)+'</td><td class="n">'+fmt(r.suggested)+'</td><td class="n '+(r.delta>=3?'up':r.delta<=-3?'down':'')+'">'+(r.delta>0?'+':'')+fmt(r.delta)+'</td></tr>').join('');}
+ document.querySelector('#t tbody').innerHTML=rows.map(r=>'<tr><td class="n">'+r.number+'</td><td>'+r.name.replace(/</g,'&lt;')+'</td><td class="muted">'+r.group.replace(/</g,'&lt;')+'</td><td class="n">'+r.budget+'</td><td class="n">'+r.sw+' %</td><td class="n">'+r.cw+' %</td><td class="n">'+fmt(r.p50)+' / '+fmt(r.p75)+' / '+fmt(r.p90)+'</td><td class="n">'+fmt(r.suggested)+'</td><td class="n '+(r.delta>=3?'up':r.delta<=-3?'down':'')+'">'+(r.delta>0?'+':'')+fmt(r.delta)+'</td>'+(RAT?'<td class="n">'+r.re+' / '+r.rf+' / <b>'+r.rh+'</b> %</td>':'')+(CMP?'<td class="n">'+(r.cwOld==null?'–':r.cwOld+' %')+'</td><td class="n '+(r.dc>=10?'down':r.dc<=-10?'up':'')+'">'+(r.dc>0?'+':'')+fmt(r.dc)+'</td>':'')+'</tr>').join('');}
 document.querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;dir=key===k?-dir:1;key=k;render();});
 document.getElementById('filter').oninput=render;render();
 const svg=document.querySelector('svg'),tip=document.getElementById('tip'),cross=document.getElementById('cross'),box=document.getElementById('chart');

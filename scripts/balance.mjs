@@ -8,7 +8,9 @@
 //
 // Env: GAME_DIR (game repo checkout, default ./game), SAMPLES (games per level and player, default 200),
 //      TARGET (share of casual players who should win, default 0.75), ONLY (comma-separated level numbers),
-//      OUT (default reports/balance)
+//      OUT (default reports/balance),
+//      CHARGE_SWAP (auto = use the rule "move a charge by swapping it with a matching tile" when the game has it, 0 = off),
+//      COMPARE (1 = also play every level WITHOUT moving charges and show the difference; default 1 when the rule exists)
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -22,9 +24,16 @@ const load = f => import(pathToFileURL(path.join(GAME, 'src', f)).href);
 
 const { levelGroups } = await load('levelCatalog.js');
 const { adjacent, swap } = await load('match3.js');
-const { moveBudget, initialIce, iceMatches, ensurePlayableBoard } = await load('levelRules.js');
+const rules = await load('levelRules.js');
+const { moveBudget, initialIce, iceMatches, ensurePlayableBoard } = rules;
+// Newer game versions: a charge can be moved by swapping it with an ordinary tile that then makes a match.
+const swapMatches = rules.swapMatches || null;
+const CHARGE_SWAP = process.env.CHARGE_SWAP !== '0' && !!swapMatches;
+const COMPARE = CHARGE_SWAP && process.env.COMPARE !== '0';
 const { goalsFor, collectGoals, goalsComplete } = await load('objectives.js');
-const { wave, blast, isBooster, rewards, boostersEnabled } = await load('boosters.js');
+const boostersModule = await load('boosters.js');
+const { wave, blast, isBooster, rewards, boostersEnabled } = boostersModule;
+const awardCascadePulse = boostersModule.awardCascadePulse || null; // newer games: a long cascade awards a bonus Pulse
 const { makeGoalBoard, goalRefillRandom } = await load('goalRefill.js');
 const { chargeResonators, resonatorsComplete } = await load('resonators.js');
 
@@ -33,7 +42,7 @@ const levels = levelGroups.flatMap(([group, list]) => list.map(r => ({ repair: r
 function rng(seed) { return () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296); }
 
 /** Plays one game; returns the number of moves needed to win, or Infinity within the cap. */
-function play(repair, random, style, cap) {
+function play(repair, random, style, cap, chargeSwap = CHARGE_SWAP) {
   const level = repair.level, cols = level.cols, goals = goalsFor(repair), rings = repair.resonators ?? [];
   const boosts = boostersEnabled(repair), history = {};
   let ice = initialIce(repair), counts = goals.map(() => 0), charged = rings.map(() => 0);
@@ -49,8 +58,36 @@ function play(repair, random, style, cap) {
       const gain = collectGoals(goals, counts, board, hit.filter(i => !ice.includes(i) && !isBooster(board[i]))).reduce((n, x, i) => n + x - counts[i], 0);
       options.push({ a, b: a, value: gain + 5 * hit.filter(i => ice.includes(i)).length });
     });
+    const gainAt = (b, at) => { // what a charge standing at `at` would collect/break when fired
+      const hit = blast(b, cols, [at]);
+      return collectGoals(goals, counts, b, hit.filter(i => !ice.includes(i) && !isBooster(b[i]))).reduce((n, x, i) => n + x - counts[i], 0) + 5 * hit.filter(i => ice.includes(i)).length;
+    };
+    const spots = {};
+    const bestSpot = type => spots[type] ??= board.reduce((best, v, j) => {
+      if (v == null || ice.includes(j)) return best;
+      const b2 = board.slice(); b2[j] = type; const g = gainAt(b2, j);
+      return g > best.gain ? { at: j, gain: g } : best;
+    }, { at: -1, gain: -Infinity });
     for (let a = 0; a < board.length; a++) for (const b of [a + 1, a + cols]) {
-      if (b >= board.length || board[a] == null || board[b] == null || isBooster(board[a]) || isBooster(board[b]) || ice.includes(a) || ice.includes(b) || !adjacent(a, b, cols)) continue;
+      if (b >= board.length || board[a] == null || board[b] == null || ice.includes(a) || ice.includes(b) || !adjacent(a, b, cols)) continue;
+      if (isBooster(board[a]) || isBooster(board[b])) {
+        // Moving a charge (the game decides validity with its own swapMatches): the match counts as usual,
+        // plus how much better the charge's new spot is for a later blast.
+        if (!chargeSwap || (isBooster(board[a]) && isBooster(board[b]))) continue;
+        const hit = swapMatches(board, a, b, cols, ice);
+        if (!hit.length) continue;
+        const next = swap(board, a, b), charge = isBooster(board[a]) ? a : b, to = charge === a ? b : a;
+        const gain = collectGoals(goals, counts, next, hit.filter(i => !ice.includes(i))).reduce((n, x, i) => n + x - counts[i], 0);
+        const coverHits = new Set(hit.flatMap(i => [i - cols, i + cols, i % cols ? i - 1 : -1, (i + 1) % cols ? i + 1 : -1]).filter(j => ice.includes(j))).size;
+        const here = gainAt(board, charge), better = Math.max(0, gainAt(next, to) - here);
+        // "Walking" the charge: a player who sees a much better spot further away moves the charge towards it
+        // step by step (each step is still a normal match) and fires it there.
+        const best = bestSpot(board[charge]);
+        const dist = (i, j) => Math.abs(Math.floor(i / cols) - Math.floor(j / cols)) + Math.abs(i % cols - j % cols);
+        const walk = best.gain > here + 3 && dist(to, best.at) < dist(charge, best.at) ? (best.gain - here) * 0.6 : 0;
+        options.push({ a, b, charge: true, value: gain + 5 * coverHits + (hit.some(nearRing) ? 6 : 0) + (boosts ? rewards(next, cols, ice, [to, charge]).length * 4 : 0) + Math.max(better * 0.8, walk) });
+        continue;
+      }
       const next = swap(board, a, b), hit = iceMatches(next, cols, ice);
       if (!hit.length) continue;
       const gain = collectGoals(goals, counts, next, hit.filter(i => !ice.includes(i))).reduce((n, x, i) => n + x - counts[i], 0);
@@ -63,11 +100,12 @@ function play(repair, random, style, cap) {
     const m = pool[Math.floor(random() * pool.length)];
     const activation = m.a === m.b;
     board = activation ? [...board] : swap(board, m.a, m.b);
-    let hit = activation ? [m.a] : iceMatches(board, cols, ice), cascade = 0;
+    let hit = activation ? [m.a] : iceMatches(board, cols, ice), cascade = 0, cascadeMatches = 0, lastCascade = [];
     while (hit.length) {
       if (++cascade > 40) break;
       const natural = activation && cascade === 1 ? [] : iceMatches(board, cols, ice);
-      charged = chargeResonators(rings, charged, natural, cols);
+      if (cascade > 1 && natural.length) { cascadeMatches++; lastCascade = natural; }
+      charged = chargeResonators(rings, charged, natural, cols, board); // newer games need the board (separate combinations)
       const resolved = wave(board, ice, level, {
         enabled: boosts, activate: activation && cascade === 1 ? m.a : null, preferred: cascade === 1 ? [m.b, m.a] : [], random,
         refillRandom: collected => goalRefillRandom(level, goals, collectGoals(goals, counts, board, collected), board, ice, collected, history, random),
@@ -76,6 +114,7 @@ function play(repair, random, style, cap) {
       board = resolved.board; ice = resolved.ice;
       hit = iceMatches(board, cols, ice);
     }
+    if (awardCascadePulse) board = awardCascadePulse(board, ice, { cascades: cascadeMatches, enabled: boosts && !done(), preferred: lastCascade }).board;
     if (done()) return move;
   }
   return Infinity;
@@ -92,6 +131,11 @@ for (const { repair, group, number } of levels) {
   for (const style of ['skilled', 'casual']) {
     const needed = [];
     for (let s = 0; s < SAMPLES; s++) needed.push(play(repair, rng(1701 + s * 7919 + number), style, cap));
+    if (COMPARE) { // same games (same random seeds) without moving charges
+      let wins = 0;
+      for (let s = 0; s < SAMPLES; s++) if (play(repair, rng(1701 + s * 7919 + number), style, budget, false) <= budget) wins++;
+      (row.noChargeSwap ??= {})[style] = wins / SAMPLES;
+    }
     needed.sort((a, b) => a - b);
     const finite = needed.filter(Number.isFinite);
     row[style] = {
@@ -99,6 +143,12 @@ for (const { repair, group, number } of levels) {
       p25: q(needed, 0.25), p50: q(needed, 0.5), p75: q(needed, 0.75), p90: q(needed, 0.9),
       stuck: (SAMPLES - finite.length) / SAMPLES,
       target: q(needed, TARGET),
+      // the blind-playtest rule: out of moves or ≤2 left = hard, 3–6 = fair, 7+ = easy
+      rating: {
+        easy: needed.filter(n => budget - n >= 7).length / SAMPLES,
+        fair: needed.filter(n => budget - n >= 3 && budget - n <= 6).length / SAMPLES,
+        hard: needed.filter(n => !(budget - n >= 3)).length / SAMPLES,
+      },
     };
   }
   const want = row.casual.target; // moves that TARGET share of casual players need
@@ -110,7 +160,8 @@ for (const { repair, group, number } of levels) {
 process.stdout.write('\n');
 
 fs.mkdirSync(OUT, { recursive: true });
-fs.writeFileSync(path.join(OUT, 'balance.json'), JSON.stringify({ samples: SAMPLES, target: TARGET, at: new Date().toISOString(), levels: results }, null, 1));
-fs.writeFileSync(path.join(OUT, 'balance.csv'), ['level;name;group;budget;skilled_win;casual_win;casual_p50;casual_p75;casual_p90;suggested_budget;change']
-  .concat(results.map(r => [r.number, `"${r.name}"`, `"${r.group}"`, r.budget, Math.round(r.skilled.win * 100), Math.round(r.casual.win * 100), r.casual.p50, r.casual.p75, r.casual.p90, r.suggested ?? '', r.delta ?? ''].join(';'))).join('\n'));
+fs.writeFileSync(path.join(OUT, 'balance.json'), JSON.stringify({ samples: SAMPLES, target: TARGET, chargeSwap: CHARGE_SWAP, compare: COMPARE, at: new Date().toISOString(), levels: results }, null, 1));
+fs.writeFileSync(path.join(OUT, 'balance.csv'), ['level;name;group;budget;skilled_win;casual_win;casual_p50;casual_p75;casual_p90;suggested_budget;change;casual_win_without_charge_moves;casual_easy;casual_fair;casual_hard']
+  .concat(results.map(r => [r.number, `"${r.name}"`, `"${r.group}"`, r.budget, Math.round(r.skilled.win * 100), Math.round(r.casual.win * 100), r.casual.p50, r.casual.p75, r.casual.p90, r.suggested ?? '', r.delta ?? '', r.noChargeSwap ? Math.round(r.noChargeSwap.casual * 100) : '', Math.round(r.casual.rating.easy * 100), Math.round(r.casual.rating.fair * 100), Math.round(r.casual.rating.hard * 100)].join(';'))).join('\n'));
+console.log(`přesun nábojů: ${CHARGE_SWAP ? 'ano' : 'ne (hra ho nemá nebo CHARGE_SWAP=0)'}${COMPARE ? ', porovnání bez přesunu: ano' : ''}`);
 console.log(`hotovo: ${results.length} levelů, ${SAMPLES} her na level a hráče, ${Math.round((Date.now() - t0) / 1000)} s`);
