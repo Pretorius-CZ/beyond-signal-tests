@@ -8,6 +8,7 @@ a hledají chyby. Hru nijak nemění: čtou ji jen zvenku, stejně jako hráč.
 1. Otevře hru (výchozí: živý web), přeskočí intro a vstoupí na loď.
 2. Prochází místnosti a otevírá další nedokončenou opravu (level).
 3. Hraje match-3: vybírá tahy podle cílů levelu, rozbíjí kryty a odpaluje nabité dílky (boosty).
+   Náboj umí i přesunout (výměnou s dílkem, který tím udělá kombinaci) a dovést ho tam, kde výbuch zasáhne nejvíc.
 4. V posledních 3 tazích použije pomůcky (EMP, Beam, Laser). Když mu dojdou tahy,
    jednou se podívá na simulovanou reklamu za +5 tahů.
 5. Na každé důležité obrazovce udělá screenshot a kontrolu:
@@ -16,6 +17,7 @@ a hledají chyby. Hru nijak nemění: čtou ji jen zvenku, stejně jako hráč.
    - nesmysly v textu (`undefined`, `NaN`, `null`, `[object Object]`, nepřeložené klíče…).
 6. Zapisuje chyby JavaScriptu, varování v konzoli a nenačtené soubory.
 
+Boti hrají na `https://game.playbeyondthesignal.com/` (hlavní doména je teď web hry).
 Do statistik ve hře boti ve výchozím stavu nic neposílají. Jak je tam pustit
 a zároveň umět odfiltrovat, popisuje sekce Statistiky.
 
@@ -74,18 +76,25 @@ Výsledek je v záložce *Summary* běhu a podrobně v příloze (*Artifacts*).
 |---|---|---|
 | **Kontrola – balanc levelů** | Simuluje každý level stovkykrát se zkušeným a s běžným hráčem (přímo kódem hry, bez prohlížeče). Ukáže, kolik % hráčů level vyhraje s danými tahy, a navrhne počet tahů pro cílovou úspěšnost (výchozí 75 %). Graf obtížnosti + tabulka. | 20–40 min |
 | **Kontrola – opičák (netrpělivý hráč)** | Rychlé ťukání během animací, dvojklik, tahy prstem, otočení telefonu, odchod do jiné aplikace, Escape/Zpět, pomůcky, obnovení stránky. Po každém kontroluje, že deska a tahy dávají smysl. | 5–15 min |
-| **Kontrola – čeština** | Najde texty bez českého překladu ve zdrojovém kódu hry a pak projde hru v češtině a hledá zbylou angličtinu a useknutý text. | 5–10 min |
+| **Kontrola – čeština** | Najde texty bez českého překladu ve zdrojovém kódu hry a pak projde celou hru v češtině (každé zařízení souběžně) a hledá zbylou angličtinu a useknutý text. Do pole „levels“ jde zadat např. 8 pro rychlou kontrolu. | 2–4 h (rychlá 10 min) |
 | **Kontrola – výkon a paměť** | Rychlost načtení (normálně i slabý telefon s 3G), plynulost, zaseknutí a jestli paměť roste s počtem levelů (únik). Jen Chromium. | 10–20 min |
 | **Kontrola – přístupnost** | Automatická kontrola WCAG 2.2 (axe) hlavních obrazovek + ovládání klávesnicí. | 5–10 min |
+| **Kontrola – slepý playtest (bot)** | Projde stránku playtest.html jako člověk: odehraje všech 200 testů co nejrychleji a ohodnotí je podle zbylých tahů (došly nebo ≤ 2 = Těžké, 3–6 = Akorát, 7+ = Lehké). Hodnocení zapíše do databáze s poznámkou „BOT“. Každé zařízení = jeden průchod. | 1,5–4 h |
 | **Kontrola – změny vzhledu** | Každý den v 7:41 vyfotí stejné obrazovky a porovná je s minulým během. Změny ukáže vedle sebe (minule / teď / rozdíl). Dílky na desce a odpočet energie jsou při focení skryté. | 5–10 min |
 
-Lokálně se vybírá sada proměnnou `SUITE` (`playthrough`, `chaos`, `czech`, `perf`, `a11y`, `visual`):
+Lokálně se vybírá sada proměnnou `SUITE` (`playthrough`, `chaos`, `czech`, `perf`, `a11y`, `visual`, `playtest`):
 
 ```bash
 SUITE=chaos npx playwright test --project="Pixel 7 (Android)"
 node scripts/suite-summary.mjs chaos
 GAME_DIR=../TG_game SAMPLES=200 node scripts/balance.mjs && node scripts/balance-report.mjs
 ```
+
+Pokud hra umí přesouvat náboje, balanc každý level zahraje i bez téhle možnosti a v reportu ukáže
+„Dopad přesunu nábojů“: o kolik procent se díky pravidlu vyhrává častěji.
+
+Adresu hry pro všechny kontroly jde změnit bez úpravy kódu: *Settings → Secrets and variables → Actions →
+Variables → New repository variable* `GAME_URL` (např. `https://game.playbeyondthesignal.com/?utm_source=automated_test&utm_medium=bot&utm_campaign=qa_01`).
 
 Balanc je odhad: simulovaný „běžný hráč“ je slabší než člověk a nepoužívá reklamy ani pomůcky.
 Ber ho hlavně jako pořadí (které levely jsou nejtěžší / skoky v obtížnosti) a porovnej s reálnými daty v balance.html.
@@ -128,6 +137,7 @@ Na Windows se proměnné nastavují jinak, např. v PowerShellu: `$env:LEVELS=10
 | `LANGS` | en | jazyky, např. `en,cs` |
 | `USE_ADS` | 1 | `0` = bez simulované reklamy |
 | `USE_HELPERS` | 1 | `0` = bez pomůcek, „čistá“ hratelnost |
+| `CHARGE_SWAP` | 1 | `0` = bot nepřesouvá náboje (Pulse/Nova) výměnou s dílkem, jen je odpaluje |
 | `WORKERS` | 4 | kolik prohlížečů hraje naráz |
 | `VIDEO` | 0 | `1` = nahrávat video všech běhů |
 | `AD_MAX_WAIT` | 120 | jak dlouho (s) bot nejvýš čeká, než reklama půjde zavřít |

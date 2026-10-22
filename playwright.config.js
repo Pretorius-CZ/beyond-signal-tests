@@ -12,7 +12,7 @@ const as = (device, engine) => ({
 
 export default defineConfig({
   testDir: './tests',
-  // SUITE picks the check: playthrough (default), chaos, czech, perf, a11y, visual
+  // SUITE picks the check: playthrough (default), chaos, czech, perf, a11y, visual, playtest
   testMatch: `${process.env.SUITE || 'playthrough'}.spec.js`,
   timeout: Number(process.env.TIMEOUT_MIN || (process.env.LEVELS === 'all' ? 330 : 15)) * 60 * 1000,
   fullyParallel: true,
@@ -22,7 +22,7 @@ export default defineConfig({
   reporter: [['list'], ['html', { outputFolder: 'reports/playwright', open: 'never' }]],
   use: {
     // UTM tag: bot visits show up as their own campaign in balance.html.
-    baseURL: process.env.BASE_URL || 'https://playbeyondthesignal.com/?utm_source=automated_test&utm_medium=bot&utm_campaign=qa_01',
+    baseURL: process.env.BASE_URL || 'https://game.playbeyondthesignal.com/?utm_source=automated_test&utm_medium=bot&utm_campaign=qa_01',
     reducedMotion: 'reduce', // shorter animations = faster bots (game honours prefers-reduced-motion)
     // A full playthrough lasts hours: no video/trace there, it would be gigabytes.
     trace: process.env.LEVELS === 'all' ? 'off' : 'retain-on-failure',
