@@ -1,6 +1,7 @@
 // Blind playtest bot: goes through the game's own playtest page (playtest.html), plays every test
-// as fast as it can (fewest moves, charges, one tool of each kind) and rates it by the moves left:
-//   out of moves or at most 2 left → Těžké · 3–6 left → Akorát · 7 and more → Lehké
+// as fast as it can (fewest moves, charges, one tool of each kind) and rates it by the stars the game
+// would award (starRating.js: 30 % of the limit left = 3 stars, 15 % = 2 stars):
+//   ★★★ → Lehké · ★★ → Akorát · ★ or not finished → Těžké
 // The page writes each rating to the database itself; every bot rating carries the note "BOT …"
 // so it can be told apart from human ratings in /balance.
 //
@@ -16,11 +17,14 @@ const LIMIT = process.env.LEVELS && process.env.LEVELS !== 'all' ? Number(proces
 const SEND = process.env.PLAYTEST_SEND === '1';
 const slug = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-').replace(/^-|-$/g, '').toLowerCase();
 
-/** The rule agreed for bot ratings. */
-export function rate(outcome, remaining) {
-  if (outcome !== 'won' || remaining <= 2) return 'hard';
-  return remaining <= 6 ? 'fair' : 'easy';
+/** Stars exactly as the game awards them (starRating.js earnedStars), 0 = not finished. */
+export function stars(outcome, budget, moves) {
+  if (outcome !== 'won') return 0;
+  const left = Math.max(0, budget - moves);
+  return left >= Math.ceil(budget * 0.30) ? 3 : left >= Math.ceil(budget * 0.15) ? 2 : 1;
 }
+/** The rule agreed for bot ratings: 3 stars = easy, 2 = fair, 1 or a loss = hard. */
+export const rate = st => (st === 3 ? 'easy' : st === 2 ? 'fair' : 'hard');
 const LABEL = { easy: 'Lehké', fair: 'Akorát', hard: 'Těžké' };
 const OUTCOME = { won: 'výhra', exhausted: 'došly tahy', quit: 'přerušeno', fault: 'technická chyba', failed: 'prohra' };
 
@@ -101,16 +105,18 @@ test('slepý playtest · bot', async ({ page, baseURL }, testInfo) => {
     }
     if (!row) { diary.notes.push(`test ${before.cursor + 1}: výsledek nenalezen`); break; }
     const remaining = row.outcome === 'won' ? Math.max(0, row.budget - row.moves) : 0;
-    const rating = rate(row.outcome, remaining);
+    const budget0 = row.baseBudget ?? row.budget; // stars count from the original limit
+    const starCount = stars(row.outcome, budget0, row.moves);
+    const rating = rate(starCount);
     const pt = row.configuration?.playtest || {};
-    const note = `BOT · ${device} · ${OUTCOME[row.outcome] || row.outcome} · ${row.moves}/${row.budget} tahů, zbylo ${remaining}`;
+    const note = `BOT · ${device} · ${OUTCOME[row.outcome] || row.outcome} · ${row.moves}/${row.budget} tahů, zbylo ${remaining} · ${starCount ? '★'.repeat(starCount) : 'bez hvězd'}`;
     await page.getByRole('button', { name: LABEL[rating], exact: true }).click({ timeout: 5000 });
     await page.getByLabel('Poznámka (nepovinná)').fill(note);
     await page.getByRole('button', { name: 'Uložit hodnocení a další test' }).click();
     played++;
     const rec = {
       device, run, session: before.session, index: before.cursor + 1, id, number: numberOf[id] ?? null, name: catalog[id]?.name || id,
-      outcome: row.outcome, moves: row.moves, budget: row.budget, remaining, rating,
+      outcome: row.outcome, moves: row.moves, budget: row.budget, remaining, stars: starCount, rating,
       helpers: row.helpers || [], hints: row.hints || 0, chargesCreated: pt.chargesCreated || 0, chargeActivations: pt.chargeActivations || 0, chargeSwaps: pt.chargeSwaps || 0,
       durationMs: row.durationMs, faults,
     };

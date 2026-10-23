@@ -44,7 +44,10 @@ if (suite === 'chaos') {
   const L = { easy: 'Lehké', fair: 'Akorát', hard: 'Těžké' }, icon = { easy: '🟢', fair: '🟡', hard: '🔴' };
   const count = list => ({ easy: list.filter(r => r.rating === 'easy').length, fair: list.filter(r => r.rating === 'fair').length, hard: list.filter(r => r.rating === 'hard').length });
   const all = count(rows), n = rows.length || 1;
-  md += `Bot hodnotí podle zbylých tahů: došly nebo zbyly nejvýš 2 = **Těžké**, 3–6 = **Akorát**, 7 a víc = **Lehké**. Pomůcky má jako v testu (jednu od každé, použije je v posledních 3 tazích).\n\n`;
+  const byStars = rows.some(r => r.stars != null);
+  md += byStars
+    ? `Bot hodnotí podle hvězd, které by dostal hráč (zbylo aspoň 30 % limitu = ★★★, aspoň 15 % = ★★): ★★★ = **Lehké**, ★★ = **Akorát**, ★ nebo nedohráno = **Těžké**. Pomůcky má jako v testu (jednu od každé, použije je v posledních 3 tazích).\n\n`
+    : `Bot hodnotí podle zbylých tahů: došly nebo zbyly nejvýš 2 = **Těžké**, 3–6 = **Akorát**, 7 a víc = **Lehké**. Pomůcky má jako v testu (jednu od každé, použije je v posledních 3 tazích).\n\n`;
   md += `| Zařízení | Ohodnoceno | Lehké | Akorát | Těžké | Odesláno do databáze |\n|---|---|---|---|---|---|\n${devices.map(d => { const r = rows.filter(x => x.device === d), c = count(r), run = runs.find(x => x.device === d); return `| ${d} | ${r.length} | ${c.easy} | ${c.fair} | ${c.hard} | ${run ? (run.sent ? (run.pending ? `⚠️ čeká ${run.pending}` : '✅') : 'ne (zkušební běh)') : '–'} |`; }).join('\n')}\n| **Celkem** | ${rows.length} | ${all.easy} (${Math.round(100 * all.easy / n)} %) | ${all.fair} (${Math.round(100 * all.fair / n)} %) | ${all.hard} (${Math.round(100 * all.hard / n)} %) | |\n`;
   // per level: all bot ratings, sorted from the hardest
   const byLevel = {};

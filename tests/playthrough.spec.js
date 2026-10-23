@@ -10,6 +10,7 @@ const LANGS = (process.env.LANGS || 'en').split(',');
 const POLICY = {
   ads: process.env.USE_ADS !== '0',
   helpers: process.env.USE_HELPERS !== '0',
+  chargeSwap: process.env.CHARGE_SWAP !== '0', // move charges by swapping them with a matching tile
   retries: Number(process.env.RETRIES ?? (LEVELS >= 999 ? 3 : 0)), // repeated attempts after a loss
 };
 

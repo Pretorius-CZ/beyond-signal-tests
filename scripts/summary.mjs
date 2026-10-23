@@ -153,14 +153,16 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
 const pickShots = screens => {
   if (process.env.SHOTS_SAMPLE !== '1') return screens;
   const boards = screens.filter(s => s.label.startsWith('deska'));
-  return screens.filter(s => s.issues || /uvodni|^lod$|prohra|dosly|chyba|zaseknuto|nenalezen/.test(s.label) || s === boards[0] || s === boards.at(-1));
+  const flagged = screens.filter(s => s.issues).slice(0, 4);
+  const losses = screens.filter(s => /prohra|chyba|zaseknuto|nenalezen/.test(s.label)).slice(0, 6);
+  return screens.filter(s => /uvodni|^lod$|konec/.test(s.label) || s === boards[0] || s === boards.at(-1) || flagged.includes(s) || losses.includes(s));
 };
 const runCard = r => {
   const g = groupsOf(r), log = logLines(r);
   return `<article class="run">
   <header><span class="pill ${state(r)}">${STATE[state(r)]}</span><h3>${esc(r.project)}</h3><span class="meta">${r.viewport?.width}×${r.viewport?.height} · ${r.language.toUpperCase()} · načtení ${sec(r.loadMs)} · ${mb(r.bytes)}</span></header>
-  <div class="scroll"><table><thead><tr><th>Level</th><th>Výsledek</th><th>Pokusy</th><th>Tahy</th><th>Pomůcky</th><th>Reklama</th><th>Boosty</th><th>Čas</th></tr></thead><tbody>
-  ${r.levels.map((l, i) => `<tr><td>L${i + 1} ${esc(l.title)}</td><td>${won(l) ? '<span class="pill ok">výhra</span>' : `<span class="pill bad">${esc(l.result)}</span>`}</td><td class="num">${l.attempts || 1}</td><td class="num">${l.movesUsed ?? '–'} / ${l.budget ?? '–'}</td><td>${esc(l.helpersUsed?.join(', ') || '–')}</td><td class="num">${l.adsWatched || '–'}</td><td class="num">${l.boostersFired ?? '–'}</td><td class="num">${l.durationMs ? Math.round(l.durationMs / 1000) + ' s' : '–'}</td></tr>`).join('')}
+  <div class="scroll"><table><thead><tr><th>Level</th><th>Výsledek</th><th>Pokusy</th><th>Tahy</th><th>Pomůcky</th><th>Reklama</th><th>Boosty (přesuny)</th><th>Čas</th></tr></thead><tbody>
+  ${r.levels.map((l, i) => `<tr><td>L${i + 1} ${esc(l.title)}</td><td>${won(l) ? '<span class="pill ok">výhra</span>' : `<span class="pill bad">${esc(l.result)}</span>`}</td><td class="num">${l.attempts || 1}</td><td class="num">${l.movesUsed ?? '–'} / ${l.budget ?? '–'}</td><td>${esc(l.helpersUsed?.join(', ') || '–')}</td><td class="num">${l.adsWatched || '–'}</td><td class="num">${l.boostersFired ?? '–'}${l.chargeMoves ? ` (${l.chargeMoves})` : ''}</td><td class="num">${l.durationMs ? Math.round(l.durationMs / 1000) + ' s' : '–'}</td></tr>`).join('')}
   </tbody></table></div>
   ${g.length ? `<ul class="find">${g.map(x => `<li class="${x.severity}">${esc(KIND[x.kind] || x.kind)} · ${x.elements}×<small>${esc([...x.screens].join(', '))} · např. ${esc(x.example.el)} ${esc(x.example.detail || '')}</small></li>`).join('')}</ul>` : ''}
   ${log.length ? `<details><summary>Konzole a síť (${log.length})</summary><pre>${esc(log.join('\n'))}</pre></details>` : ''}

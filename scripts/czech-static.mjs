@@ -54,3 +54,5 @@ missing.sort((a, b) => a.sources[0].localeCompare(b.sources[0]) || a.text.locale
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(path.join(OUT, 'missing.json'), JSON.stringify({ checked: found.size, missing }, null, 1));
 console.log(`zkontrolováno ${found.size} textů, bez překladu ${missing.length}`);
+
+fs.writeFileSync(path.join(OUT, 'levels.txt'), String(levelGroups.reduce((n, [, list]) => n + list.length, 0)));

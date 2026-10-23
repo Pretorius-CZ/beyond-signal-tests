@@ -23,7 +23,7 @@ if (tooEasy.length) md += `\n### Nejsnazší vůči cíli\n\n${head}${rows(tooEa
 if (L[0]?.casual.rating) {
   const verdict = r => { const g = r.casual.rating; return g.hard >= g.fair && g.hard >= g.easy ? 'hard' : g.fair >= g.easy ? 'fair' : 'easy'; };
   const c = { easy: 0, fair: 0, hard: 0 }; L.forEach(r => c[verdict(r)]++);
-  md += `\n### Hodnocení jako ve slepém playtestu\n\nStejné pravidlo jako bot v playtestu (došly tahy nebo zbyly nejvýš 2 = Těžké, 3–6 = Akorát, 7+ = Lehké), ale ze stovek her běžného hráče na každý level a bez pomůcek. Level dostane hodnocení, které padlo nejčastěji.\n\n| Počet levelů | Lehké | Akorát | Těžké |\n|---|---|---|---|\n| běžný hráč | ${c.easy} | ${c.fair} | ${c.hard} |\n`;
+  md += `\n### Hodnocení jako ve slepém playtestu\n\nStejné pravidlo jako bot v playtestu, tedy hvězdy, které dostane hráč (★★★ = Lehké, ★★ = Akorát, ★ nebo prohra = Těžké), ale ze stovek her běžného hráče na každý level a bez pomůcek. Level dostane hodnocení, které padlo nejčastěji.\n\n| Počet levelů | Lehké | Akorát | Těžké |\n|---|---|---|---|\n| běžný hráč | ${c.easy} | ${c.fair} | ${c.hard} |\n`;
 }
 if (data.compare) {
   const cmp = L.filter(r => r.noChargeSwap).map(r => ({ ...r, dc: pct(r.casual.win) - pct(r.noChargeSwap.casual), ds: pct(r.skilled.win) - pct(r.noChargeSwap.skilled) }));

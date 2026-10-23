@@ -37,6 +37,10 @@ const awardCascadePulse = boostersModule.awardCascadePulse || null; // newer gam
 const { makeGoalBoard, goalRefillRandom } = await load('goalRefill.js');
 const { chargeResonators, resonatorsComplete } = await load('resonators.js');
 
+// Stars exactly as the game awards them (starRating.js), with a fallback for older game versions.
+let starsFor = (budget, moves) => { const left = Math.max(0, budget - moves); return left >= Math.ceil(budget * 0.30) ? 3 : left >= Math.ceil(budget * 0.15) ? 2 : 1; };
+try { const m = await load('starRating.js'); if (m.earnedStars) starsFor = m.earnedStars; } catch {}
+
 const levels = levelGroups.flatMap(([group, list]) => list.map(r => ({ repair: r, group }))).map((x, i) => ({ ...x, number: i + 1 }));
 
 function rng(seed) { return () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296); }
@@ -143,11 +147,11 @@ for (const { repair, group, number } of levels) {
       p25: q(needed, 0.25), p50: q(needed, 0.5), p75: q(needed, 0.75), p90: q(needed, 0.9),
       stuck: (SAMPLES - finite.length) / SAMPLES,
       target: q(needed, TARGET),
-      // the blind-playtest rule: out of moves or ≤2 left = hard, 3–6 = fair, 7+ = easy
+      // the blind-playtest rule = the stars a player gets: ★★★ easy, ★★ fair, ★ or a loss hard
       rating: {
-        easy: needed.filter(n => budget - n >= 7).length / SAMPLES,
-        fair: needed.filter(n => budget - n >= 3 && budget - n <= 6).length / SAMPLES,
-        hard: needed.filter(n => !(budget - n >= 3)).length / SAMPLES,
+        easy: needed.filter(n => n <= budget && starsFor(budget, n) === 3).length / SAMPLES,
+        fair: needed.filter(n => n <= budget && starsFor(budget, n) === 2).length / SAMPLES,
+        hard: needed.filter(n => !(n <= budget) || starsFor(budget, n) === 1).length / SAMPLES,
       },
     };
   }

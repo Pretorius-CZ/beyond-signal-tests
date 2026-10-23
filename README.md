@@ -79,7 +79,7 @@ Výsledek je v záložce *Summary* běhu a podrobně v příloze (*Artifacts*).
 | **Kontrola – čeština** | Najde texty bez českého překladu ve zdrojovém kódu hry a pak projde celou hru v češtině (každé zařízení souběžně) a hledá zbylou angličtinu a useknutý text. Do pole „levels“ jde zadat např. 8 pro rychlou kontrolu. | 2–4 h (rychlá 10 min) |
 | **Kontrola – výkon a paměť** | Rychlost načtení (normálně i slabý telefon s 3G), plynulost, zaseknutí a jestli paměť roste s počtem levelů (únik). Jen Chromium. | 10–20 min |
 | **Kontrola – přístupnost** | Automatická kontrola WCAG 2.2 (axe) hlavních obrazovek + ovládání klávesnicí. | 5–10 min |
-| **Kontrola – slepý playtest (bot)** | Projde stránku playtest.html jako člověk: odehraje všech 200 testů co nejrychleji a ohodnotí je podle zbylých tahů (došly nebo ≤ 2 = Těžké, 3–6 = Akorát, 7+ = Lehké). Hodnocení zapíše do databáze s poznámkou „BOT“. Každé zařízení = jeden průchod. | 1,5–4 h |
+| **Kontrola – slepý playtest (bot)** | Projde stránku playtest.html jako člověk: odehraje všech 200 testů co nejrychleji a ohodnotí je podle hvězd, které by dostal hráč (★★★ = Lehké, ★★ = Akorát, ★ nebo prohra = Těžké). Hodnocení zapíše do databáze s poznámkou „BOT“. Každé zařízení = jeden průchod. | 1,5–4 h |
 | **Kontrola – změny vzhledu** | Každý den v 7:41 vyfotí stejné obrazovky a porovná je s minulým během. Změny ukáže vedle sebe (minule / teď / rozdíl). Dílky na desce a odpočet energie jsou při focení skryté. | 5–10 min |
 
 Lokálně se vybírá sada proměnnou `SUITE` (`playthrough`, `chaos`, `czech`, `perf`, `a11y`, `visual`, `playtest`):
