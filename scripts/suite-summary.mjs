@@ -19,11 +19,18 @@ if (suite === 'chaos') {
   md = `| Scénář | ${devices.join(' | ')} |\n|---|${devices.map(() => '---|').join('')}\n` + scenarios.map(s => `| ${s} | ${devices.map(d => { const r = rows.find(x => x.scenario === s && x.device === d); return !r ? '–' : r.problems.length ? `❌ ${r.problems.length}` : r.notes?.length ? '⚠️' : '✅'; }).join(' | ')} |`).join('\n') + '\n';
   if (bad.length) md += `\n### Problémy\n\n${bad.map(r => `- **${r.scenario}** · ${r.device}: ${r.problems.slice(0, 5).map(esc).join('; ')}${r.problems.length > 5 ? ` (+${r.problems.length - 5})` : ''}`).join('\n')}\n`;
   if (notes.length) md += `\n### Postřehy\n\n${[...new Set(notes.flatMap(r => r.notes))].map(n => `- ${esc(n)}`).join('\n')}\n`;
-} else if (suite === 'czech') {
-  title = 'Čeština';
+} else if (suite === 'czech' || suite === 'german') {
+  const german = suite === 'german';
+  const label = german ? 'německého' : 'českého';
+  const langDir = german ? 'de' : 'cs';
+  title = german ? 'Němčina' : 'Čeština';
   const st = fs.existsSync(path.join(DIR, 'missing.json')) ? JSON.parse(fs.readFileSync(path.join(DIR, 'missing.json'), 'utf8')) : null;
   const dyn = jsons().filter(j => j.device);
-  md = st ? `**Ve zdrojovém kódu:** zkontrolováno ${st.checked} textů, bez českého překladu **${st.missing.length}**.\n` : '';
+  md = st ? `**Ve zdrojovém kódu:** zkontrolováno ${st.checked} textů, bez ${label} překladu **${st.missing.length}**.\n` : '';
+  if (st?.catalog) md += `Katalog: **${st.catalog.german}/${st.catalog.english}** ID, chybí ${st.catalog.missing}, další problémy ${st.catalog.problems.length + (st.legal?.length || 0)}.\n`;
+  if (st?.pages) md += `Webové stránky /${langDir}: **${st.pages.filter(p => !p.problem).length}/${st.pages.length}** v pořádku.\n`;
+  if (st?.catalog?.problems?.length || st?.legal?.length) md += `\n| Problém |\n|---|\n${[...(st.catalog?.problems || []), ...(st.legal || [])].slice(0, 60).map(p => `| ${esc(p)} |`).join('\n')}\n`;
+  if (st?.pages?.some(p => p.problem)) md += `\n${st.pages.filter(p => p.problem).map(p => `- \`de/${p.file}\`: ${esc(p.problem)}`).join('\n')}\n`;
   if (st?.missing.length) md += `\n| Text | Kde |\n|---|---|\n${st.missing.slice(0, 60).map(m => `| ${esc(m.text.slice(0, 100))} | ${esc(m.sources.join(', '))} |`).join('\n')}\n`;
   for (const d of dyn) {
     md += `\n### Ve hře · ${d.device}\n\n${d.played != null ? `- odehráno levelů: **${d.played}** (vyhráno ${d.won})${d.end ? ` · ${esc(d.end)}` : ''}${d.last ? ` · poslední: ${esc(d.last)}` : ''}\n` : ''}- zbylá angličtina: **${d.english.length}**\n- useknutý nebo přetékající text: **${d.clipped.length}**\n`;
