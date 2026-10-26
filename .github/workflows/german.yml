@@ -21,6 +21,9 @@ on:
       base_url:
         description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
         default: ''
+      browser:
+        description: 'Spustit i prohlížečovou část? (1 = ano, 0 = jen kontrola textů, ~1 min)'
+        default: '0'
 
 permissions:
   contents: read
@@ -49,8 +52,11 @@ jobs:
       - run: npm ci
       - name: Překlady ve zdrojovém kódu
         run: GAME_DIR=game node scripts/german-static.mjs
-      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Prohlížeče
+        if: inputs.browser == '1'
+        run: npx playwright install --with-deps chromium webkit firefox
       - name: Němčina ve hře
+        if: inputs.browser == '1'
         id: check
         continue-on-error: true
         env:
