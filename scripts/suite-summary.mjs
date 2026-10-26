@@ -31,6 +31,10 @@ if (suite === 'chaos') {
   if (st?.pages) md += `Webové stránky /${langDir}: **${st.pages.filter(p => !p.problem).length}/${st.pages.length}** v pořádku.\n`;
   if (st?.catalog?.problems?.length || st?.legal?.length) md += `\n| Problém |\n|---|\n${[...(st.catalog?.problems || []), ...(st.legal || [])].slice(0, 60).map(p => `| ${esc(p)} |`).join('\n')}\n`;
   if (st?.pages?.some(p => p.problem)) md += `\n${st.pages.filter(p => p.problem).map(p => `- \`de/${p.file}\`: ${esc(p.problem)}`).join('\n')}\n`;
+  if (st?.language) {
+    md += `Jazyk: zkontrolováno **${st.language.checked}** německých textů, **${st.language.notGerman.length}** nevypadá německy.${st.language.detectorWorks ? '' : ' ⚠️ Detektor je podezřelý – v anglickém katalogu našel málo.'}\n`;
+    if (st.language.notGerman.length) md += `\n| ID | Text | Důvod |\n|---|---|---|\n${st.language.notGerman.slice(0, 60).map(i => `| ${esc(i.id)}${i.form ? '.' + esc(i.form) : ''} | ${esc(i.text.slice(0, 100))} | ${esc(i.reason)} |`).join('\n')}\n`;
+  }
   if (st?.missing.length) md += `\n| Text | Kde |\n|---|---|\n${st.missing.slice(0, 60).map(m => `| ${esc(m.text.slice(0, 100))} | ${esc(m.sources.join(', '))} |`).join('\n')}\n`;
   for (const d of dyn) {
     md += `\n### Ve hře · ${d.device}\n\n${d.played != null ? `- odehráno levelů: **${d.played}** (vyhráno ${d.won})${d.end ? ` · ${esc(d.end)}` : ''}${d.last ? ` · poslední: ${esc(d.last)}` : ''}\n` : ''}- zbylá angličtina: **${d.english.length}**\n- useknutý nebo přetékající text: **${d.clipped.length}**\n`;

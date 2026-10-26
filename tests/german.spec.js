@@ -18,10 +18,17 @@ function findEnglish() {
   const EN = /\b(the|and|of|to|into|your|you|tap|moves?|energy|repairs?|play(?:ing|ed)?|next|back|continue|leave|close|settings|chapters?|hints?|ship|with|this|is|are|from|for|all|collect|break|reach|survive|destroy|combine|retry|keep|watch|begin|skip|story|account|music|sound|sign|mechanics|help|loading|again|done|requires|explore|restore|survey|restoration|enter|open|resume)\b/gi;
   const DE = /[äöüß]|\b(der|die|das|und|mit|für|von|zu|im|ist|nicht|dein|deine|du|noch|Züge|Zug|Stern|Sterne|Stein|Steine|Schiff|Spiel|Kapitel|Einstellungen|Weiter|Zurück|Schließen|Hinweis|Logbuch|Reparatur|betreten|starten|Sammle|Entferne|Verbinde|Erreiche|Schütze|Befreie|Tippe|Kombiniere|Gewinnt|Spielfeld|Laden|Wird|Alle|Einträge|Fertig|Erneut|Regeln|Sprache|Musik)\b/i;
   const ALLOW = /^(Beyond the Signal|BEYOND THE SIGNAL|BEYOND|THE SIGNAL|Pulse|Nova|EMP|Laser|Haven|Kepler Reach|Aster Veil|Elysium|English|Deutsch|EN|CZ|DE|OK|Cockpit|Online|Asteroid|Navigation|Level .*)$/i;
-  // The game name and the place names are English in every language; strip them before looking
-  // for English words, otherwise "Kepler Reach erkunden" looks like a leftover.
-  const brand = /\b(Beyond the Signal|BEYOND THE SIGNAL|Kepler Reach|Aster Veil)\b/gi;
-  const hitsOf = text => text.replace(brand, ' ').match(EN) || [];
+  // Words that never occur in German UI, so one is already a finding even inside a German sentence
+  // ("In Settings kannst du…"). German borrows Level, Start, Account, Sound, Story – those are not here.
+  const STRONG = /\b(settings|chapters?|ship|hint|play|next|back|continue|leave|close|tap|moves?|repair|energy|loading|retry|requires|explore|restore|survey|restoration|resume|collect|break|destroy|combine|survive|mechanics)\b/i;
+  // The game name and the place names are English in every language; strip them (and placeholders,
+  // URLs, domains) before looking for English words, otherwise "Kepler Reach erkunden" looks like a leftover.
+  const brand = /\b(Beyond the Signal|BEYOND THE SIGNAL|Kepler Reach|Aster Veil|Google Play)\b/gi;
+  const clean = text => text.replace(brand, ' ')
+    .replace(/\{[^}]*\}/g, ' ')
+    .replace(/https?:\/\/\S+/gi, ' ')
+    .replace(/\b(?:[a-z0-9-]+\.)+(?:com|is|net|org|io|dev|app|cz)\b/gi, ' ');
+  const hitsOf = text => clean(text).match(EN) || [];
   const out = new Set();
   const modals = [...document.querySelectorAll('dialog[open]')].filter(d => d.matches(':modal'));
   const root = modals.at(-1) || document.body;
@@ -31,9 +38,9 @@ function findEnglish() {
     const el = n.parentElement;
     if (t.length < 2 || !el || !el.getClientRects().length || ALLOW.test(t) || el.closest('[translate="no"], .notranslate:not(html), script, style')) continue;
     const hits = hitsOf(t);
-    // Two English words mean a leftover sentence; one is enough for a short label ("Play", "Settings").
-    // A German marker (umlaut, German function word) excuses a single hit – "Tippe auf Play" is caught by the store check.
-    if (hits.length >= 2 || (hits.length === 1 && !DE.test(t) && t.split(' ').length <= 4)) out.add(t.slice(0, 120));
+    // Two English words mean a leftover sentence; one is enough for a short label ("Play")
+    // or for a word that never appears in German. A German marker excuses other single hits.
+    if (hits.length >= 2 || (hits.length === 1 && (STRONG.test(clean(t)) || (!DE.test(t) && t.split(' ').length <= 4)))) out.add(t.slice(0, 120));
   }
   for (const el of root.querySelectorAll('[aria-label]')) {
     const t = el.getAttribute('aria-label');
