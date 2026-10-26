@@ -40,6 +40,7 @@ if (suite === 'chaos') {
     md += `\n### Ve hře · ${d.device}\n\n${d.played != null ? `- odehráno levelů: **${d.played}** (vyhráno ${d.won})${d.end ? ` · ${esc(d.end)}` : ''}${d.last ? ` · poslední: ${esc(d.last)}` : ''}\n` : ''}- zbylá angličtina: **${d.english.length}**\n- useknutý nebo přetékající text: **${d.clipped.length}**\n`;
     if (d.english.length) md += d.english.slice(0, 30).map(e => `  - „${esc(e.text)}“ (${e.screen})`).join('\n') + '\n';
     if (d.clipped.length) md += d.clipped.slice(0, 20).map(c => `  - ${c.kind}: ${esc(c.el)} ${esc(c.detail)} (${c.screen})`).join('\n') + '\n';
+    if (d.stuck) md += `- zastavilo se na: ${esc(d.stuck.slice(0, 500))}\n`;
   }
 } else if (suite === 'perf') {
   title = 'Výkon a paměť';

@@ -4,7 +4,7 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 import path from 'node:path';
-import { prepare, enterGame, openNextLevel, playLevel, collectWin, checkpoint } from '../lib/player.js';
+import { prepare, enterGame, openNextLevel, playLevel, collectWin, checkpoint, describeScreen } from '../lib/player.js';
 import { auditScreen } from '../lib/page-probe.js';
 
 const ALL = process.env.LEVELS === 'all';
@@ -87,7 +87,7 @@ test('němčina · hra a menu', async ({ page, baseURL }, testInfo) => {
   expect.soft(await page.evaluate(() => document.documentElement.lang), 'jazyk stránky (html lang)').toBe('de');
   await look('lod');
   for (let n = 0; n < LEVELS; n++) {
-    if (!(await openNextLevel(page))) { progress.end = EXPECTED && progress.won >= EXPECTED ? 'konec hry' : 'bot nenašel další level'; break; }
+    if (!(await openNextLevel(page))) { progress.end = EXPECTED && progress.won >= EXPECTED ? 'konec hry' : 'bot nenašel další level'; progress.stuck = await describeScreen(page); break; }
     await page.waitForTimeout(600);
     await look(`level-${n + 1}`);
     const level = await playLevel(page, testInfo, diary, { ads: true, helpers: true, retries: ALL ? 3 : 1 });
