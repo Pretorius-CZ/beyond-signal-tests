@@ -78,18 +78,20 @@ Výsledek je v záložce *Summary* běhu a podrobně v příloze (*Artifacts*).
 | **Kontrola – opičák (netrpělivý hráč)** | Rychlé ťukání během animací, dvojklik, tahy prstem, otočení telefonu, odchod do jiné aplikace, Escape/Zpět, pomůcky, obnovení stránky. Po každém kontroluje, že deska a tahy dávají smysl. | 5–15 min |
 | **Kontrola – čeština** | Najde texty bez českého překladu ve zdrojovém kódu hry a pak projde celou hru v češtině (každé zařízení souběžně) a hledá zbylou angličtinu a useknutý text. Do pole „levels“ jde zadat např. 8 pro rychlou kontrolu. | 2–4 h (rychlá 10 min) |
 | **Kontrola – němčina** | Totéž pro němčinu a navíc jazyková kontrola: u všech 2472 textů ověří, že opravdu vypadají německy (ne jen že existují) — odhalí angličtinu v katalogu i anglické názvy tlačítek uvnitř německých vět. Zkontroluje stránky `/de`, zahraje levely v němčině a ověří, že přepínač jazyka v Nastavení funguje a volba přežije obnovení stránky. Ve výchozím stavu běží **jen kontrola textů (~1 min, bez prohlížeče)**; prohlížečovou část zapne pole „browser“ = 1. | 1 min (texty) / 10 min–hodiny (s prohlížečem) |
+| **Kontrola – francouzština** | Totéž pro francouzštinu: jazyková kontrola všech textů (odhalí angličtinu v katalogu i anglické názvy tlačítek uvnitř francouzských vět), stránky `/fr`, hra ve francouzštině a přepínač jazyka. Ve výchozím stavu jen texty (~1 min), prohlížeč zapne „browser“ = 1. | 1 min (texty) / 10 min–hodiny (s prohlížečem) |
 | **Kontrola – výkon a paměť** | Rychlost načtení (normálně i slabý telefon s 3G), plynulost, zaseknutí a jestli paměť roste s počtem levelů (únik). Jen Chromium. | 10–20 min |
 | **Kontrola – přístupnost** | Automatická kontrola WCAG 2.2 (axe) hlavních obrazovek + ovládání klávesnicí. | 5–10 min |
 | **Kontrola – slepý playtest (bot)** | Projde stránku playtest.html jako člověk: odehraje všech 200 testů co nejrychleji a ohodnotí je podle hvězd, které by dostal hráč (★★★ = Lehké, ★★ = Akorát, ★ nebo prohra = Těžké). Hodnocení zapíše do databáze s poznámkou „BOT“. Každé zařízení = jeden průchod. | 1,5–4 h |
 | **Kontrola – změny vzhledu** | Každý den v 7:41 vyfotí stejné obrazovky a porovná je s minulým během. Změny ukáže vedle sebe (minule / teď / rozdíl). Dílky na desce a odpočet energie jsou při focení skryté. | 5–10 min |
 
-Lokálně se vybírá sada proměnnou `SUITE` (`playthrough`, `chaos`, `czech`, `german`, `perf`, `a11y`, `visual`, `playtest`):
+Lokálně se vybírá sada proměnnou `SUITE` (`playthrough`, `chaos`, `czech`, `german`, `french`, `perf`, `a11y`, `visual`, `playtest`):
 
 ```bash
 SUITE=chaos npx playwright test --project="Pixel 7 (Android)"
 node scripts/suite-summary.mjs chaos
 GAME_DIR=../TG_game SAMPLES=200 node scripts/balance.mjs && node scripts/balance-report.mjs
 GAME_DIR=../TG_game node scripts/german-static.mjs   # jen překlady, bez prohlížeče a sítě
+GAME_DIR=../TG_game node scripts/french-static.mjs   # totéž pro francouzštinu
 SUITE=german DE_SELFTEST=1 npx playwright test --project="Pixel 7 (Android)"   # ověří, že detektor angličtinu opravdu najde
 ```
 
@@ -164,7 +166,7 @@ v testovacím režimu sítě.
 - `lib/page-probe.js`: čtení desky z HTML, výběr tahu, kontroly obrazovky
 - `lib/player.js`: ovládání hry (navigace, tahy, pomůcky, reklama)
 - `tests/playthrough.spec.js`: scénář průchodu
-- `tests/chaos|czech|german|perf|a11y|visual.spec.js`, `scripts/balance*.mjs`, `scripts/czech-static.mjs`, `scripts/german-static.mjs`, `scripts/visual-compare.mjs`, `scripts/suite-summary.mjs`: další kontroly
+- `tests/chaos|czech|german|french|perf|a11y|visual.spec.js`, `scripts/balance*.mjs`, `scripts/czech-static.mjs`, `scripts/german-static.mjs`, `scripts/french-static.mjs`, `scripts/visual-compare.mjs`, `scripts/suite-summary.mjs`: další kontroly
 - `scripts/summary.mjs`: souhrn a HTML přehled
 - `.github/workflows/game-tests.yml`: rychlá kontrola
 - `.github/workflows/full-game.yml`: celá hra

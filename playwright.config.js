@@ -12,7 +12,7 @@ const as = (device, engine) => ({
 
 export default defineConfig({
   testDir: './tests',
-  // SUITE picks the check: playthrough (default), chaos, czech, german, perf, a11y, visual, playtest
+  // SUITE picks the check: playthrough (default), chaos, czech, german, french, perf, a11y, visual, playtest
   // only tests/<suite>.spec.js directly in the tests folder (a stray copy in a subfolder is ignored)
   testMatch: new RegExp(`(^|[\\/])tests[\\/]${process.env.SUITE || 'playthrough'}\\.spec\\.js$`),
   timeout: Number(process.env.TIMEOUT_MIN || (process.env.LEVELS === 'all' ? 330 : 15)) * 60 * 1000,
