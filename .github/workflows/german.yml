@@ -51,6 +51,8 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Překlady ve zdrojovém kódu
+        id: texty
+        continue-on-error: true
         run: GAME_DIR=game node scripts/german-static.mjs
       - name: Prohlížeče
         if: inputs.browser == '1'
@@ -78,7 +80,7 @@ jobs:
             reports/shots
           retention-days: 30
       - name: Výsledek
-        if: steps.check.outcome == 'failure'
+        if: steps.texty.outcome == 'failure' || steps.check.outcome == 'failure'
         run: |
-          echo "::warning::Kontrola něco našla – viz souhrn."
+          echo "::warning::Kontrola něco našla – viz souhrn a přílohu."
           exit 1
