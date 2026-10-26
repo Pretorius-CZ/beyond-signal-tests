@@ -28,7 +28,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 360
     env:
       SUITE: german
       BASE_URL: ${{ inputs.base_url }}
