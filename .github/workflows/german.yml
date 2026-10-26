@@ -1,0 +1,78 @@
+name: Kontrola – němčina
+
+# 1) Ve zdrojovém kódu hry porovná německé katalogy s anglickými (chybějící ID, placeholdery,
+#    plurály, nepřeložené texty) a zkontroluje vygenerované stránky /de (bez prohlížeče, pár sekund).
+# 2) Zahraje první levely v němčině, projde menu a hledá zbylou angličtinu a useknutý text.
+# 3) Ověří, že němčinu jde přepnout v Nastavení a že volba přežije obnovení stránky.
+# Spouští se jen ručně: Actions → "Kontrola – němčina" → Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: 'Zařízení (názvy z playwright.config.js, oddělené čárkou)'
+        default: 'iPhone SE (malý telefon),Galaxy S9+ (Android),Desktop 1920×1080'
+      levels:
+        description: 'Kolik levelů zahrát v němčině'
+        default: '8'
+      branch:
+        description: 'Větev hry v repozitáři TG_game (pro kontrolu zdrojového kódu)'
+        default: 'codex/cockpit-stage'
+      base_url:
+        description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      SUITE: german
+      BASE_URL: ${{ inputs.base_url }}
+      LEVELS: ${{ inputs.levels }}
+      FULL_BROWSERS: '1'
+      WORKERS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Pretorius-CZ/TG_game
+          ref: ${{ inputs.branch }}
+          path: game
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Překlady ve zdrojovém kódu
+        run: GAME_DIR=game node scripts/german-static.mjs
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Němčina ve hře
+        id: check
+        continue-on-error: true
+        env:
+          DEVICES: ${{ inputs.devices }}
+        run: |
+          IFS=',' read -ra D <<< "$DEVICES"; args=(); for d in "${D[@]}"; do args+=(--project "$(echo "$d" | xargs)"); done
+          npx playwright test "${args[@]}"
+      - name: Souhrn
+        if: always()
+        run: |
+          node scripts/suite-summary.mjs german > /dev/null
+          cat reports/german/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nemcina-${{ github.run_number }}
+          path: |
+            reports/german
+            reports/shots
+          retention-days: 30
+      - name: Výsledek
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "::warning::Kontrola něco našla – viz souhrn."
+          exit 1
