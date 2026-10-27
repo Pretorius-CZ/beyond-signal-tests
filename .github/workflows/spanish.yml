@@ -1,0 +1,88 @@
+name: Kontrola – španělština
+
+# 1) Ve zdrojovém kódu hry porovná španělské katalogy s anglickými (chybějící ID, placeholdery,
+#    plurály, nepřeložené texty) a zkontroluje vygenerované stránky /es (bez prohlížeče, pár sekund).
+# 2) Zahraje první levely ve španělštině, projde menu a hledá zbylou angličtinu a useknutý text.
+# 3) Ověří, že španělštinu jde přepnout v Nastavení a že volba přežije obnovení stránky.
+# Spouští se jen ručně: Actions → "Kontrola – španělština" → Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      devices:
+        description: 'Zařízení (názvy z playwright.config.js, oddělené čárkou)'
+        default: 'iPhone SE (malý telefon),Galaxy S9+ (Android),Desktop 1920×1080'
+      levels:
+        description: 'Kolik levelů zahrát ve španělštině'
+        default: '8'
+      branch:
+        description: 'Větev hry v repozitáři TG_game (pro kontrolu zdrojového kódu)'
+        default: 'codex/cockpit-stage'
+      base_url:
+        description: 'Adresa hry (prázdné = živý web s UTM štítkem botů)'
+        default: ''
+      browser:
+        description: 'Spustit i prohlížečovou část? (1 = ano, 0 = jen kontrola textů, ~1 min)'
+        default: '0'
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      SUITE: spanish
+      BASE_URL: ${{ inputs.base_url }}
+      LEVELS: ${{ inputs.levels }}
+      # Text check: Chromium device emulation is enough and installs several times faster.
+      # For real Safari set this to '1' and add webkit to the install line below.
+      FULL_BROWSERS: '0'
+      WORKERS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Pretorius-CZ/TG_game
+          ref: ${{ inputs.branch }}
+          path: game
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Překlady ve zdrojovém kódu
+        id: texty
+        continue-on-error: true
+        run: GAME_DIR=game node scripts/spanish-static.mjs
+      - name: Prohlížeče
+        if: inputs.browser == '1'
+        run: npx playwright install --with-deps chromium
+      - name: Španělština ve hře
+        if: inputs.browser == '1'
+        id: check
+        continue-on-error: true
+        env:
+          DEVICES: ${{ inputs.devices }}
+        run: |
+          IFS=',' read -ra D <<< "$DEVICES"; args=(); for d in "${D[@]}"; do args+=(--project "$(echo "$d" | xargs)"); done
+          npx playwright test "${args[@]}"
+      - name: Souhrn
+        if: always()
+        run: |
+          node scripts/suite-summary.mjs spanish > /dev/null
+          cat reports/spanish/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: spanelstina-${{ github.run_number }}
+          path: |
+            reports/spanish
+            reports/shots
+          retention-days: 30
+      - name: Výsledek
+        if: steps.texty.outcome == 'failure' || steps.check.outcome == 'failure'
+        run: |
+          echo "::warning::Kontrola něco našla – viz souhrn a přílohu."
+          exit 1
