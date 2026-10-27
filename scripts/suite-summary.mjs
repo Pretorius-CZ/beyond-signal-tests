@@ -19,11 +19,12 @@ if (suite === 'chaos') {
   md = `| Scénář | ${devices.join(' | ')} |\n|---|${devices.map(() => '---|').join('')}\n` + scenarios.map(s => `| ${s} | ${devices.map(d => { const r = rows.find(x => x.scenario === s && x.device === d); return !r ? '–' : r.problems.length ? `❌ ${r.problems.length}` : r.notes?.length ? '⚠️' : '✅'; }).join(' | ')} |`).join('\n') + '\n';
   if (bad.length) md += `\n### Problémy\n\n${bad.map(r => `- **${r.scenario}** · ${r.device}: ${r.problems.slice(0, 5).map(esc).join('; ')}${r.problems.length > 5 ? ` (+${r.problems.length - 5})` : ''}`).join('\n')}\n`;
   if (notes.length) md += `\n### Postřehy\n\n${[...new Set(notes.flatMap(r => r.notes))].map(n => `- ${esc(n)}`).join('\n')}\n`;
-} else if (['czech', 'german', 'french'].includes(suite)) {
+} else if (['czech', 'german', 'french', 'spanish'].includes(suite)) {
   const LANG = {
     czech: { title: 'Čeština', gen: 'českého', adv: 'česky', dir: 'cs' },
     german: { title: 'Němčina', gen: 'německého', adv: 'německy', dir: 'de' },
     french: { title: 'Francouzština', gen: 'francouzského', adv: 'francouzsky', dir: 'fr' },
+    spanish: { title: 'Španělština', gen: 'španělského', adv: 'španělsky', dir: 'es' },
   }[suite];
   const label = LANG.gen;
   const langDir = LANG.dir;
